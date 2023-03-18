@@ -36,6 +36,7 @@ import { ProgramCardRowComponent } from './components/reusable/program-card-row/
 import { SettingsComponent } from './components/admin/settings/settings.component';
 import { AddTrainerComponent } from './components/admin/add-trainer/add-trainer.component';
 import { AssignRoleComponent } from './components/admin/assign-role/assign-role.component';
+import { FooterComponent } from './components/reusable/footer/footer.component';
 
 // Angular Materials Imports should be written here
 
@@ -74,7 +75,8 @@ import { AssignRoleComponent } from './components/admin/assign-role/assign-role.
     ProgramCardRowComponent,
     SettingsComponent,
     AddTrainerComponent,
-    AssignRoleComponent 
+    AssignRoleComponent,
+    FooterComponent 
 ],
 
 
