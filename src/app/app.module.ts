@@ -37,12 +37,21 @@ import { SettingsComponent } from './components/admin/settings/settings.componen
 import { AddTrainerComponent } from './components/admin/add-trainer/add-trainer.component';
 import { AssignRoleComponent } from './components/admin/assign-role/assign-role.component';
 import { FooterComponent } from './components/reusable/footer/footer.component';
+import { ErrorPageComponent } from './components/error-page/error-page.component';
 
 // Angular Materials Imports should be written here
+import { MatCommonModule } from '@angular/material/core';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatIconModule } from '@angular/material/icon';
+import { MatButtonModule } from '@angular/material/button';
+import { MatSidenavModule } from '@angular/material/sidenav';
+import { MatListModule } from '@angular/material/list';
+import { ProfileComponent } from './components/reusable/profile/profile.component';
 
 
 
-// Add whatever you import from materials
+
+// ############### DO NOT TOUCH ######################
 @NgModule({
   declarations: [
     AppComponent,
@@ -76,15 +85,23 @@ import { FooterComponent } from './components/reusable/footer/footer.component';
     SettingsComponent,
     AddTrainerComponent,
     AssignRoleComponent,
-    FooterComponent 
-],
+    FooterComponent,
+    ErrorPageComponent,
+    ProfileComponent
+  ],
 
 
-// ############### DO NOT TOUCH ######################
+  // Add whatever you import from materials
   imports: [
     BrowserModule,
     AppRoutingModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    MatToolbarModule,
+    MatCommonModule,
+    MatIconModule,
+    MatButtonModule,
+    MatSidenavModule,
+    MatListModule
   ],
   providers: [],
   bootstrap: [AppComponent]
