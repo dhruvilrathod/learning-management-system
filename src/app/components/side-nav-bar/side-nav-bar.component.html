@@ -1,1 +1,10 @@
-<p>side-nav-bar works!</p>
+<mat-drawer-container>
+    <mat-drawer class="sidenav-container" [mode]="smallScreen ? 'over' : 'side'" #sideNavDrawer [opened]="sideNavOpened">
+        <mat-nav-list role="navigation">
+            <a *ngFor="let link of links" mat-list-item [routerLink]="link.route" routerLinkActive="sidenav-item-selected" [activated]="link.isActive" aria-disabled="false">{{link.name}}</a>
+        </mat-nav-list>
+    </mat-drawer>
+    <mat-drawer-content style="height: calc(100vh - 64px);">
+        <router-outlet></router-outlet>
+    </mat-drawer-content>
+</mat-drawer-container>

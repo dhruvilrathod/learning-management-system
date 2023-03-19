@@ -1,0 +1,6 @@
+<app-header-nav-bar *ngIf="router.url !== '/login' && router.url !== '/sign-up'"></app-header-nav-bar>
+<app-side-nav-bar
+    *ngIf="router.url !== '/login' && router.url !== '/sign-up' && router.url !== '/course-details' && router.url !== '/error-page' && router.url !== '/'">
+</app-side-nav-bar>
+<router-outlet
+    *ngIf="router.url == '/login' || router.url == '/sign-up' || router.url == '/course-details' || router.url == '/error-page' || router.url == '/'"></router-outlet>
