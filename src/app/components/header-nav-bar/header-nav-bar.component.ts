@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { SidenavService } from 'src/app/services/sidenav.service';
 
 @Component({
@@ -18,7 +19,8 @@ export class HeaderNavBarComponent implements OnInit {
   public sideNavStatus: boolean = false;
 
   constructor(
-    private _sidenavService: SidenavService
+    private _sidenavService: SidenavService,
+    public router: Router
   ) {
 
   }
