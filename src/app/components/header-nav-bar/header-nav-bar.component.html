@@ -1,5 +1,5 @@
 <mat-toolbar color="primary" class="">
-    <button *ngIf="smallScreen == true" (click)="toggleSideNav()" mat-icon-button aria-label="Example icon-button with menu icon">
+    <button *ngIf="smallScreen == true && router.url !== '/'" (click)="toggleSideNav()" mat-icon-button aria-label="Example icon-button with menu icon">
         <mat-icon>menu</mat-icon>
     </button>
     <span>Asite LMS</span>
