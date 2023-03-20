@@ -47,7 +47,7 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatListModule } from '@angular/material/list';
 import { ProfileComponent } from './components/reusable/profile/profile.component';
-
+import {MatTableModule} from '@angular/material/table';
 
 
 
@@ -101,7 +101,8 @@ import { ProfileComponent } from './components/reusable/profile/profile.componen
     MatIconModule,
     MatButtonModule,
     MatSidenavModule,
-    MatListModule
+    MatListModule,
+    MatTableModule
   ],
   providers: [],
   bootstrap: [AppComponent]
