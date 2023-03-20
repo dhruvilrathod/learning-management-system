@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Program } from 'src/app/models/interfaces';
 
 @Component({
   selector: 'app-evaluation-table',
@@ -7,8 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class EvaluationTableComponent implements OnInit{
 
-  // public date: 
-
+  public data!: Program;
   constructor () { }
 
   ngOnInit(): void {
