@@ -46,6 +46,8 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatListModule } from '@angular/material/list';
+import {MatCardModule} from '@angular/material/card';
+import {MatSlideToggleModule} from '@angular/material/slide-toggle';
 import { ProfileComponent } from './components/reusable/profile/profile.component';
 
 
@@ -101,7 +103,9 @@ import { ProfileComponent } from './components/reusable/profile/profile.componen
     MatIconModule,
     MatButtonModule,
     MatSidenavModule,
-    MatListModule
+    MatListModule,
+    MatCardModule,
+    MatSlideToggleModule
   ],
   providers: [],
   bootstrap: [AppComponent]

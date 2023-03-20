@@ -1,0 +1,38 @@
+    .mat-mdc-card-content {
+        display: flex;
+        box-sizing: border-box;
+        justify-content: space-between;
+    }
+    .mat-mdc-card{
+        margin: 10px;
+    }
+    .container{
+        background-color: aliceblue;
+        margin: 30px;
+    }
+    .link>a{
+        text-decoration: none;
+        color: black;
+        padding: 10px;
+    }
+    .link>a:hover{
+        color: #3f51b5;
+        font-weight: 500;
+    }
+    .nav{
+        margin-bottom: 50px;
+        padding-top: 10px;
+        display: flex;
+        justify-content: space-between;
+
+    }
+    .caret.caret-up {
+        border-top-width: 0;
+        border-bottom: 4px solid #fff;
+    }
+    .filter{
+        display: flex;
+    }
+    .dropdown{
+        margin-right: 10px;
+    }
