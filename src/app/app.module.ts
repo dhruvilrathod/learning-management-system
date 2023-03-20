@@ -38,6 +38,8 @@ import { AddTrainerComponent } from './components/admin/add-trainer/add-trainer.
 import { AssignRoleComponent } from './components/admin/assign-role/assign-role.component';
 import { FooterComponent } from './components/reusable/footer/footer.component';
 import { ErrorPageComponent } from './components/error-page/error-page.component';
+import { ProfileComponent } from './components/reusable/profile/profile.component';
+
 
 // Angular Materials Imports should be written here
 import { MatCommonModule } from '@angular/material/core';
@@ -46,8 +48,12 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatListModule } from '@angular/material/list';
+<<<<<<< HEAD
 import { ProfileComponent } from './components/reusable/profile/profile.component';
 import {MatTableModule} from '@angular/material/table';
+=======
+
+>>>>>>> 533091548377b97d7a7f89fee4a1e1b05e630ad4
 
 
 
