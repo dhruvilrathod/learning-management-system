@@ -5,3 +5,7 @@
 .sidenav-container{
     width: 240px                                                                                                                                                        ;
 }
+
+.drawer-height {
+    height: calc(100vh - 64px);
+}
