@@ -48,12 +48,12 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatListModule } from '@angular/material/list';
-<<<<<<< HEAD
-import { ProfileComponent } from './components/reusable/profile/profile.component';
+// <<<<<<< HEAD
+// import { ProfileComponent } from './components/reusable/profile/profile.component';
 import {MatTableModule} from '@angular/material/table';
-=======
+// =======
 
->>>>>>> 533091548377b97d7a7f89fee4a1e1b05e630ad4
+// >>>>>>> 533091548377b97d7a7f89fee4a1e1b05e630ad4
 
 
 

@@ -39,6 +39,17 @@ export interface Trainer {
     profilePicURL: string
 }
 
+export interface Grades {
+    overallGrades: string,
+    gradeDetails: {
+        mainSkillName: string,
+        subSkills: {
+            subskillName:string,
+            subSkillScore: string 
+        }[]
+    }[]
+}
+
 export interface Program {
     programTitle: string,
     programID: string,
@@ -51,5 +62,6 @@ export interface Program {
     programImageURL?: string,
     programDescription?: string,
     totalEnrolledStudent?: number,
-    programOutcomes?: any[]
+    programOutcomes?: any[],
+    overallGrades: string
 }
