@@ -49,7 +49,11 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatListModule } from '@angular/material/list';
 import {MatCardModule} from '@angular/material/card';
+import {MatTableModule} from '@angular/material/table';
 import {MatSlideToggleModule} from '@angular/material/slide-toggle';
+import {MatFormFieldModule} from '@angular/material/form-field';
+import {MatInputModule} from '@angular/material/input';
+
 // import { ProfileComponent } from './components/reusable/profile/profile.component';
 
 
@@ -107,7 +111,10 @@ import {MatSlideToggleModule} from '@angular/material/slide-toggle';
     MatSidenavModule,
     MatListModule,
     MatCardModule,
-    MatSlideToggleModule
+    MatTableModule,
+    MatSlideToggleModule,
+    MatFormFieldModule,
+    MatInputModule
   ],
   providers: [],
   bootstrap: [AppComponent]

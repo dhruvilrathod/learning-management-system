@@ -50,7 +50,7 @@ export interface Grades {
     }[]
 }
 
-export interface Program {
+    export interface Program {
     programTitle: string,
     programID: string,
     trainers: string[],
@@ -63,5 +63,6 @@ export interface Program {
     programDescription?: string,
     totalEnrolledStudent?: number,
     programOutcomes?: any[],
-    overallGrades: string
+    overallGrades: string,
+    isPublished: boolean
 }

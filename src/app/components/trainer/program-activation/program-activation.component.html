@@ -4,20 +4,15 @@
     <div class="content">
     <div class="nav">
         <div class="link">
-            <a  (click) = "setToggleActive(true)">Publish</a>   
-            <a  (click) = "setToggleActive(false)">Unpublish</a>
+            <a mat-button >All</a>   
+            <a mat-button >Publish</a>   
+            <a mat-button >Unpublish</a>
         </div>
-        <div class="filter">
-            <div class="dropdown">
-                <select>
-                    <option *ngFor="let month of monthwise">{{month}}</option>
-                </select>
-            </div>
-            <div class="dropdown">
-                <select>
-                    <option *ngFor="let year of yearwise">{{year}}</option>
-                </select>
-            </div>
+        <div class="filtered">
+            <mat-form-field>
+                <mat-label>Search</mat-label>
+                <input matInput placeholder="Search" >
+            </mat-form-field>
         </div>
     </div>
     </div>
@@ -25,34 +20,38 @@
         <li *ngFor="let program of Programs"><mat-card>
             <mat-card-content> 
                 <div class="left">
-                    <img mat-card-image [src]="program.thumbnailImageURL" [alt]="program.programTitle">
-                    {{program.programTitle}}
+                    <div class="programInfo">
+                        <img mat-card-image [src]="program.thumbnailImageURL" [alt]="program.programTitle">
+                        <div class="title">{{program.programTitle}}</div>
+                    </div>
+                
+                    <div class="date">
+                        <strong>Trainers</strong>
+                        <span>
+                        {{program.trainers}}
+                        </span>
+                    </div>
+                    <div class="date">
+                    <strong>Duration</strong> 
+                        <span>
+                        {{program.duration}}
+                        </span>
+                    </div>
                 </div>
-                <div class="date">
-                    <strong>Trainers</strong>
-                    <span>
-                    {{program.trainers}}
-                    </span>
-                </div>
-                <div class="date">
-                   <strong>Duration</strong> 
-                    <span>
-                    {{program.duration}}
-                    </span>
-                </div>
-
-                <mat-slide-toggle [checked] = "isChecked"></mat-slide-toggle></mat-card-content>
+                <button mat-raised-button color="primary" >{{program.isPublished == true ? 'Publish' : 'Unpublish'}}</button>
+                <!-- <ng-template #elseBlock> <button mat-raised-button color="primary">Unpublish</button></ng-template> -->
+                </mat-card-content>
             </mat-card></li>
     </ul>
 </div>
     <!-- ----------start/end----------- -->
 
-    <div class="container" >
+    <!-- <div class="container" >
         <div class="content">
         <div class="nav">
             <div class="link">
-                <a  (click) = "setToggleActive(true)">Start</a>   
-                <!-- <a  (click) = "setToggleActive(false)">End</a> -->
+                <a  >Start</a>   
+                <a  >Unpublish</a>
             </div>
             <div class="filter">
                 <div class="dropdown">
@@ -87,13 +86,11 @@
                         {{program.duration}}
                         </span>
                     </div>
-                    <div class="example-button-row">
-                        <button mat-raised-button color="primary">Start</button>   
-                      </div>
-                     </mat-card-content>
+    
+                    <mat-slide-toggle [checked] = "isChecked"></mat-slide-toggle></mat-card-content>
                 </mat-card></li>
         </ul>
-    </div>
+    </div> -->
 
     <!-- <mat-card>
         <mat-card-content>Simple card <mat-slide-toggle></mat-slide-toggle></mat-card-content>

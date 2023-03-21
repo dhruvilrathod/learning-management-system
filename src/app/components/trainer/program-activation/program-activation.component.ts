@@ -1,32 +1,29 @@
-import { Component, OnInit } from '@angular/core';
-import { DropdownService } from 'src/app/services/dropdown.service';
+import { Component, OnInit, NgModule } from '@angular/core';
 import { Program } from "../../../models/interfaces"; 
 
 @Component({
   selector: 'app-program-activation',
   templateUrl: './program-activation.component.html',
   styleUrls: ['./program-activation.component.css'],
-  providers: [DropdownService]
+  providers: []
 })
 export class ProgramActivationComponent implements OnInit{
-  monthwise = [{}];
-  yearwise = [{}]
-  isChecked: boolean = false;
+  isPublished: boolean = true;
+  program = [{}];
 
 
-  constructor(private dropdownService: DropdownService){
+
+  constructor(){
     
     
   }
   
   ngOnInit() {
-    this.monthwise = this.dropdownService.monthwise;
-    this.yearwise = this.dropdownService.yearwise;
+    
     
   }
-  setToggleActive(value: boolean) {
-    this.isChecked = value;
-  }
+
+
   
   public Programs : Program[] = [
     {programID: "1", 
@@ -41,7 +38,8 @@ export class ProgramActivationComponent implements OnInit{
     programDescription: "string",
     totalEnrolledStudent: 50,
     programOutcomes: [1,2,3],
-    overallGrades: "A"},
+    overallGrades: "A",
+    isPublished: true},
 
     {programID: "2", 
     programTitle: "Java Development", 
@@ -55,7 +53,8 @@ export class ProgramActivationComponent implements OnInit{
     programDescription: "string",
     totalEnrolledStudent: 50,
     programOutcomes: [1,2,3],
-    overallGrades: "A"},
+    overallGrades: "A",
+    isPublished: true},
 
     {programID: "3", 
     programTitle: "Java Development", 
@@ -69,7 +68,8 @@ export class ProgramActivationComponent implements OnInit{
     programDescription: "string",
     totalEnrolledStudent: 50,
     programOutcomes: [1,2,3],
-    overallGrades: "A"},
+    overallGrades: "A",
+    isPublished: false},
 
     {programID: "4", 
     programTitle: "Java Development", 
@@ -83,7 +83,8 @@ export class ProgramActivationComponent implements OnInit{
     programDescription: "string",
     totalEnrolledStudent: 50,
     programOutcomes: [1,2,3],
-    overallGrades: "A"},
+    overallGrades: "A",
+    isPublished: false},
 
     {programID: "5", 
     programTitle: "Java Development", 
@@ -97,6 +98,9 @@ export class ProgramActivationComponent implements OnInit{
     programDescription: "string",
     totalEnrolledStudent: 50,
     programOutcomes: [1,2,3],
-    overallGrades: "A"}
+    overallGrades: "A",
+    isPublished: true}
   ]
+  
 }
+

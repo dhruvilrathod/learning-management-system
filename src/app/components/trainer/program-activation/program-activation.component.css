@@ -6,15 +6,16 @@
     }
     .mat-mdc-card{
         margin: 10px;
+        font-size: larger;
     }
     .heading{
-        color: #3f51b5; 
+        color: #ea8892; 
         font-size: 35px; 
         font-weight: 500; 
         text-align: center;
     }
     .container{
-        background-color: darkorchid;
+        background-color: #ea8892;
         margin: 30px;
         border-radius: 10px;
         padding-bottom: 10px;
@@ -32,7 +33,18 @@
     .left{
         display: flex;
         align-items: center;
-        width: 20vh;
+        width: 45vw ;
+        justify-content: space-between;
+    }
+    .title{
+        left: 20px;
+        position: relative;
+        font-size: larger;
+    }
+    .programInfo{
+        display: flex;
+        align-items: center;
+        width: 14vw;
     }
     img{
         border-radius: 50%;
@@ -51,13 +63,7 @@
         padding: 10px;
         font-size: 20px;
     }
-    .link>a:hover{
-        color: cyan;
-        font-weight: 500;
-        cursor: pointer;
-    }
     .nav{
-        margin-bottom: 50px;
         padding-top: 10px;
         display: flex;
         justify-content: space-between;
@@ -66,8 +72,9 @@
         border-top-width: 0;
         border-bottom: 4px solid #fff;
     }
-    .filter{
+    .filtered{
         display: flex;
+        margin-right: 10px;
     }
     .dropdown{
         margin-right: 10px;
