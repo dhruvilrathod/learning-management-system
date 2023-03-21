@@ -1,6 +1,6 @@
 <p>program-activation works!</p>
-<h1 style="color: #3f51b5;">Programs</h1>
-<div class="container">
+<h1 style="color: #3f51b5; font-size: 35px; font-weight: 500;">Programs</h1>
+<div class="container" >
     <div class="content">
     <div class="nav">
         <div class="link">
@@ -23,10 +23,36 @@
         </div>
     </div>
     </div>
-    <mat-card>
-    <mat-card-content>Simple card <mat-slide-toggle></mat-slide-toggle></mat-card-content>
-    </mat-card>
-    <mat-card>
+    <ul>
+        <li *ngFor="let program of Programs"><mat-card>
+            <mat-card-content> 
+                <div class="left">
+                    <img mat-card-image [src]="program.thumbnailImageURL" [alt]="program.programTitle">
+                    {{program.programTitle}}
+                </div>
+                <div class="date">
+                    <strong>Trainers</strong>
+                    <span>
+                    {{program.trainers}}
+                    </span>
+                </div>
+                <div class="date">
+                   <strong>Start Date</strong> 
+                    <span>
+                    {{program.startDate}}
+                    </span>
+                </div>
+                <div class="date">
+                    <strong>End Date</strong> 
+                    <span>
+                    {{program.endDate}}
+                    </span>
+                </div>
+                <mat-slide-toggle></mat-slide-toggle></mat-card-content>
+            </mat-card></li>
+    </ul>
+    
+    <!-- <mat-card>
         <mat-card-content>Simple card <mat-slide-toggle></mat-slide-toggle></mat-card-content>
     </mat-card>
     <mat-card>
@@ -37,5 +63,7 @@
     </mat-card>
     <mat-card>
         <mat-card-content>Simple card <mat-slide-toggle></mat-slide-toggle></mat-card-content>
-    </mat-card>
+    </mat-card> -->
+
+
 </div>

@@ -2,21 +2,46 @@
         display: flex;
         box-sizing: border-box;
         justify-content: space-between;
+        align-items: center;
     }
     .mat-mdc-card{
         margin: 10px;
     }
     .container{
-        background-color: aliceblue;
+        background-color: darkorchid;
         margin: 30px;
+        border-radius: 10px;
+        padding-bottom: 10px;
+    }
+    .date{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .left{
+        display: flex;
+        align-items: center;
+        width: 20vh;
+    }
+    img{
+        border-radius: 50%;
+        width: 50px;
+        margin-right: 5px;
+    }
+    ul{
+        padding-inline-start: 0;
+    }
+    ul>li{
+        list-style: none;
     }
     .link>a{
         text-decoration: none;
-        color: black;
+        color: white;
         padding: 10px;
+        font-size: 20px;
     }
     .link>a:hover{
-        color: #3f51b5;
+        color: #21c5d7;
         font-weight: 500;
     }
     .nav{
