@@ -49,6 +49,13 @@ import { MatListModule } from '@angular/material/list';
 import { ProfileComponent } from './components/reusable/profile/profile.component';
 
 
+import {MatTableModule} from '@angular/material/table';
+import {MatFormFieldModule} from '@angular/material/form-field';
+import {MatInputModule} from '@angular/material/input';
+import {MatPaginatorModule} from '@angular/material/paginator';
+import {MatSortModule} from '@angular/material/sort';
+import {MatCheckboxModule} from '@angular/material/checkbox';
+import {MatDialogModule} from '@angular/material/dialog';
 
 
 // ############### DO NOT TOUCH ######################
@@ -87,7 +94,7 @@ import { ProfileComponent } from './components/reusable/profile/profile.componen
     AssignRoleComponent,
     FooterComponent,
     ErrorPageComponent,
-    ProfileComponent
+    ProfileComponent,
   ],
 
 
@@ -101,9 +108,16 @@ import { ProfileComponent } from './components/reusable/profile/profile.componen
     MatIconModule,
     MatButtonModule,
     MatSidenavModule,
-    MatListModule
+    MatListModule,
+    MatTableModule,
+    MatFormFieldModule,
+    MatInputModule,
+    MatPaginatorModule,
+    MatSortModule,
+    MatCheckboxModule,
+    MatDialogModule,
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
 export class AppModule { }
