@@ -1,13 +1,10 @@
-<mat-card>
-  <mat-card-content>
-    <div class="header">
-      <P>Sign Into Your Account </P>
-    </div>
-    <form
-      (ngSubmit)="onLogin()"
-      name="assignRoleForm"
-      [formGroup]="assignRoleForm"
-    >
+<form (ngSubmit)="onLogin()" name="assignRoleForm" [formGroup]="assignRoleForm">
+  <mat-card>
+    <mat-card-content>
+      <div class="header">
+        <h2>enter Email and Password for Asignee</h2>
+      </div>
+
       <div class="emailInput">
         <mat-form-field class="full-width" appearance="outline">
           <mat-label>Email</mat-label>
@@ -24,11 +21,6 @@
       </div>
 
       <div>
-        <span>
-          <a class="text-link" class="aLink" routerLink="/auth/forgot-password"
-            >Forgot Password?</a
-          >
-        </span>
         <mat-form-field class="full-width" appearance="outline">
           <mat-label>Password</mat-label>
           <input
@@ -53,11 +45,29 @@
           </mat-error>
         </mat-form-field>
       </div>
-      <button mat-flat-button color="primary">Login</button>
-    </form>
+    </mat-card-content>
+  </mat-card>
+  <mat-card>
+    <mat-card-content>
+      <div class="header">
+        <h2>select Privilages for Asignee</h2>
+      </div>
 
-    <div class="button-row">
-      <p>Create New Account</p>
-    </div>
-  </mat-card-content>
-</mat-card>
+      <mat-selection-list #list (selectionChange)="onSelectionChange($event)">
+        <mat-list-option
+          *ngFor="let privilage of privilages"
+          [value]="privilage.privilage"
+        >
+          {{ privilage.privilage }}
+        </mat-list-option>
+      </mat-selection-list>
+
+      <p>
+        you have selected {{ list.selectedOptions.selected.length }} Which are
+        {{ selectedOptions | json }}
+      </p>
+
+      <button mat-flat-button color="primary">Assign / Revoke</button>
+    </mat-card-content>
+  </mat-card>
+</form>
