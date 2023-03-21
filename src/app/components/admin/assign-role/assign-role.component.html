@@ -1,1 +1,76 @@
-<p>assign-role works!</p>
+<form (ngSubmit)="onLogin()" name="assignRoleForm" [formGroup]="assignRoleForm">
+  <mat-card>
+    <mat-card-content>
+      <div class="header">
+        <h2>enter Email and Password for Asignee</h2>
+      </div>
+
+      <div class="emailInput">
+        <mat-form-field class="full-width" appearance="outline">
+          <mat-label>Email</mat-label>
+          <input
+            formControlName="email"
+            matInput
+            placeholder="Enter email address"
+            required
+          />
+          <mat-error *ngIf="!assignRoleForm.controls['email'].valid">
+            Email is required
+          </mat-error>
+        </mat-form-field>
+      </div>
+
+      <div>
+        <mat-form-field class="full-width" appearance="outline">
+          <mat-label>Password</mat-label>
+          <input
+            formControlName="password"
+            matInput
+            [type]="hide ? 'password' : 'text'"
+            required
+          />
+          <button
+            mat-icon-button
+            matSuffix
+            (click)="hide = !hide"
+            [attr.aria-label]="'Hide Password'"
+            [attr.aria-pressed]="hide"
+          >
+            <mat-icon>
+              {{ hide ? "visibility_off" : "visibility" }}
+            </mat-icon>
+          </button>
+          <mat-error *ngIf="!assignRoleForm.controls['password'].valid">
+            Password is required
+          </mat-error>
+        </mat-form-field>
+      </div>
+    </mat-card-content>
+  </mat-card>
+  <mat-card>
+    <mat-card-content>
+      <div class="header">
+        <h2>select Privilages for Asignee</h2>
+      </div>
+
+      <mat-selection-list #list (selectionChange)="onSelectionChange($event)">
+        <mat-list-option
+          class="selectionList"
+          *ngFor="let privilage of privilages"
+          [value]="privilage.privilage"
+        >
+          {{ privilage.privilage }}
+        </mat-list-option>
+      </mat-selection-list>
+
+      <div class="showSelected">
+        <p>
+          you have selected {{ list.selectedOptions.selected.length }} Which are
+          {{ selectedOptions | json }}
+        </p>
+      </div>
+
+      <button mat-flat-button color="primary">Assign / Revoke</button>
+    </mat-card-content>
+  </mat-card>
+</form>
