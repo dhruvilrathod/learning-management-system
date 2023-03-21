@@ -1,1 +1,57 @@
 <p>view-profile-talent works!</p>
+
+<div class="talent-profile-wrapper">
+    <!-- Talent Profile card -->
+    <mat-card class="profile-card">
+        <mat-card-header>
+          <!-- <div mat-card-avatar class="example-header-image"></div> -->
+        </mat-card-header>
+        <img class="talent-profile-image" mat-card-image src="https://bit.ly/40kBxIg" alt="talent-photo">
+        <div class="talent-name-title">
+            <p>Danya Garcia</p>
+            <mat-card-subtitle>UI/UX Developer</mat-card-subtitle>
+        </div>
+        
+        <div class="talent-basic-details">
+            <hr>
+            <mat-card-content>
+                <p>
+                  Username: dgarcia
+                </p>
+                <p>
+                  Email: dgarcia@asite.com
+                </p>
+              </mat-card-content>
+        </div>
+    
+        <mat-card-actions>
+          <button mat-raised-button color="primary">Edit</button>
+        </mat-card-actions>
+      </mat-card>
+
+      <!-- Talent profile full detail -->
+      <mat-stepper class="talent-detail-stepper" orientation="horizontal">
+        <mat-step>
+          <ng-template matStepLabel>Step 1</ng-template>
+          <ng-template matStepContent>
+            <p>This content was rendered lazily</p>
+            <button mat-button matStepperNext>Next</button>
+          </ng-template>
+        </mat-step>
+        <mat-step>
+          <ng-template matStepLabel>Step 2</ng-template>
+          <ng-template matStepContent>
+            <p>This content was also rendered lazily</p>
+            <button mat-button matStepperPrevious>Back</button>
+            <button mat-button matStepperNext>Next</button>
+          </ng-template>
+        </mat-step>
+        <mat-step>
+          <ng-template matStepLabel>Step 3</ng-template>
+          <p>This content was rendered eagerly</p>
+          <button mat-button matStepperPrevious>Back</button>
+        </mat-step>
+      </mat-stepper>
+</div>
+
+  

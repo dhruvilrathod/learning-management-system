@@ -1,0 +1,38 @@
+.talent-profile-wrapper{
+    display: flex;
+}
+.profile-card{
+    width: 25%;
+    padding-bottom: 2em;
+}
+
+.talent-basic-details{
+    margin: 0 auto;
+    text-align: left;
+    width: 70%;
+    font-size: 16px;
+}
+
+.profile-card button{
+    text-align: center;
+    margin: auto;
+}
+
+.talent-profile-image{
+   width: 70%;
+   height: 70%;
+   margin: auto;
+}
+
+.talent-name-title{
+    text-align: center;
+    font-size: 32px;
+    margin-top: 0.5em;
+}
+
+/* Stepper */
+
+.talent-detail-stepper{
+    width: 60%;
+}
+
