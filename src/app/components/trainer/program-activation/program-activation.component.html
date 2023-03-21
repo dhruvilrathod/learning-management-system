@@ -1,24 +1,22 @@
-<p>program-activation works!</p>
-<h1 style="color: #3f51b5; font-size: 35px; font-weight: 500;">Programs</h1>
+<h1 class="heading">PROGRAMS</h1>
+<!-- ----------publish/unpublish----------- -->
 <div class="container" >
     <div class="content">
     <div class="nav">
         <div class="link">
-            <a href="http://">Activate</a>
-            <a href="http://">Deactivate</a>
+            <a  (click) = "setToggleActive(true)">Publish</a>   
+            <a  (click) = "setToggleActive(false)">Unpublish</a>
         </div>
         <div class="filter">
             <div class="dropdown">
-                <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Monthwise
-                <span class="caret">⌄</span></button>
-                <ul class="dropdown-menu">
-                </ul>
+                <select>
+                    <option *ngFor="let month of monthwise">{{month}}</option>
+                </select>
             </div>
             <div class="dropdown">
-                <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Yearwise
-                <span class="caret">⌄</span></button>
-                <ul class="dropdown-menu">
-                </ul>
+                <select>
+                    <option *ngFor="let year of yearwise">{{year}}</option>
+                </select>
             </div>
         </div>
     </div>
@@ -37,21 +35,66 @@
                     </span>
                 </div>
                 <div class="date">
-                   <strong>Start Date</strong> 
+                   <strong>Duration</strong> 
                     <span>
-                    {{program.startDate}}
+                    {{program.duration}}
                     </span>
                 </div>
-                <div class="date">
-                    <strong>End Date</strong> 
-                    <span>
-                    {{program.endDate}}
-                    </span>
-                </div>
-                <mat-slide-toggle></mat-slide-toggle></mat-card-content>
+
+                <mat-slide-toggle [checked] = "isChecked"></mat-slide-toggle></mat-card-content>
             </mat-card></li>
     </ul>
-    
+</div>
+    <!-- ----------start/end----------- -->
+
+    <div class="container" >
+        <div class="content">
+        <div class="nav">
+            <div class="link">
+                <a  (click) = "setToggleActive(true)">Start</a>   
+                <!-- <a  (click) = "setToggleActive(false)">End</a> -->
+            </div>
+            <div class="filter">
+                <div class="dropdown">
+                    <select>
+                        <option *ngFor="let month of monthwise">{{month}}</option>
+                    </select>
+                </div>
+                <div class="dropdown">
+                    <select>
+                        <option *ngFor="let year of yearwise">{{year}}</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+        </div>
+        <ul>
+            <li *ngFor="let program of Programs"><mat-card>
+                <mat-card-content> 
+                    <div class="left">
+                        <img mat-card-image [src]="program.thumbnailImageURL" [alt]="program.programTitle">
+                        {{program.programTitle}}
+                    </div>
+                    <div class="date">
+                        <strong>Trainers</strong>
+                        <span>
+                        {{program.trainers}}
+                        </span>
+                    </div>
+                    <div class="date">
+                       <strong>Duration</strong> 
+                        <span>
+                        {{program.duration}}
+                        </span>
+                    </div>
+                    <div class="example-button-row">
+                        <button mat-raised-button color="primary">Start</button>   
+                      </div>
+                     </mat-card-content>
+                </mat-card></li>
+        </ul>
+    </div>
+
     <!-- <mat-card>
         <mat-card-content>Simple card <mat-slide-toggle></mat-slide-toggle></mat-card-content>
     </mat-card>
@@ -66,4 +109,3 @@
     </mat-card> -->
 
 
-</div>

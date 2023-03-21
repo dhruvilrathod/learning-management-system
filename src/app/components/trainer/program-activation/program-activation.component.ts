@@ -1,12 +1,32 @@
-import { Component } from '@angular/core';
-import { Program } from "../../../models/interfaces";
+import { Component, OnInit } from '@angular/core';
+import { DropdownService } from 'src/app/services/dropdown.service';
+import { Program } from "../../../models/interfaces"; 
 
 @Component({
   selector: 'app-program-activation',
   templateUrl: './program-activation.component.html',
-  styleUrls: ['./program-activation.component.css']
+  styleUrls: ['./program-activation.component.css'],
+  providers: [DropdownService]
 })
-export class ProgramActivationComponent {
+export class ProgramActivationComponent implements OnInit{
+  monthwise = [{}];
+  yearwise = [{}]
+  isChecked: boolean = false;
+
+
+  constructor(private dropdownService: DropdownService){
+    
+    
+  }
+  
+  ngOnInit() {
+    this.monthwise = this.dropdownService.monthwise;
+    this.yearwise = this.dropdownService.yearwise;
+    
+  }
+  setToggleActive(value: boolean) {
+    this.isChecked = value;
+  }
   
   public Programs : Program[] = [
     {programID: "1", 
