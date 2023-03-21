@@ -48,6 +48,9 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatListModule } from '@angular/material/list';
 // import { ProfileComponent } from './components/reusable/profile/profile.component';
+import { MatCardModule } from '@angular/material/card';
+import { MatInputModule } from '@angular/material/input';
+import { ReactiveFormsModule } from '@angular/forms';
 
 // ############### DO NOT TOUCH ######################
 @NgModule({
@@ -85,7 +88,7 @@ import { MatListModule } from '@angular/material/list';
     AssignRoleComponent,
     FooterComponent,
     ErrorPageComponent,
-    ProfileComponent,
+    // ProfileComponent,
   ],
 
   // Add whatever you import from materials
@@ -99,6 +102,9 @@ import { MatListModule } from '@angular/material/list';
     MatButtonModule,
     MatSidenavModule,
     MatListModule,
+    MatCardModule,
+    MatInputModule,
+    ReactiveFormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
