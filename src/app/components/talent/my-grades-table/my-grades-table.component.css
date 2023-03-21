@@ -1,47 +1,162 @@
-.example-card {
-  max-width: 400px;
-  margin-left: 230px;
-}
-
-.example-header-image {
-  background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg');
-  background-size: cover;
-}
-/* .grade_table>
-table {
-  width: 100%;
-} */
-
+.grade_table{
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  margin: auto;
+  margin-bottom: 50px;
+} 
 .mat-mdc-form-field {
   font-size: 14px;
   width: 100%;
 }
+.mdc-data-table__cell,.mdc-data-table__header-cell{
+  border-bottom-style: none;
+  border-spacing: 30px;
+  /* text-align: center; */
+}
+mat-paginator{
+  padding: 30px;
+}
 
-/* .grade_table>td, .grade_table>th {
-  width: 25%;
-} */
+/* report card */
 .program{
   display:flex;
-  border:1px solid black;
+  /* border:1px solid black; */
+  width:100%;
 }
 .program_description{
-  border:1px solid black;
+  /* border:1px solid black; */
   width:50%;
+  display: flex;
+  justify-content: center;
+  color:white;
+  margin: auto;
+}
+.img img{
+  padding: 30px;
+  width: 500px;
+  height: 300px;
+  border-radius: 50px;
+}
+.example-card {
+  max-width: 500px;
+  height: fit-content;
+  background-color: #3f51b5;
+  border-radius: 25px;
+  /* margin-left: 100px; */
+}
+mat-card-header{
+  padding: 0px;
+  text-align: center;
+}
+mat-card-subtitle p{
+  margin: 20px 45px 10px;
+}
+mat-card-subtitle{
+  /* border: 1px solid black; */
+  margin-left: 15px;
+  display: flex;
+  text-align: left;
+  color:white;
+}
+mat-card-content{
+  background-color: white;
+  border-radius: 25px;
+  text-align: justify;
+  padding: 25px;
+  margin: 0px 30px;
+  margin-bottom: 20px;
+  color: #3f51b5;
 }
 .report_card{
   display: flex;
-  border:1px solid black;
+  flex-direction: column;
+  /* border:1px solid black; */
   width: 50%;
-  justify-content: space-evenly;
+  margin: auto;
+  margin-left: -130px ;
 }
-h2{
+.category{
+  /* border: 1px solid black; */
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+/* circle-progress & table */
+.cp_t{
+  width: 70%;
+  display: flex;
+  flex-direction: row;
+  margin: auto;
+}
+/* report-card header */
+.rc_header{
   text-align: center;
+  padding: 20px;
 }
-table{
+.rc_table{
   border-spacing: 10px;
   /* border:1px solid black; */
   width: 250px;
+  margin: auto;
 }
-td{
+hr{
+  margin:30px auto;
+  width: 550px;
+}
+.btn{
   /* border: 1px solid black; */
+  display: flex;
+  flex-direction: row;
+  margin-top: 40px;
+}
+.download-btn{
+  display: block;
+  margin: auto;
+}
+.download-btn:hover{
+  border: 1px solid;
+  border-color: #3f51b5;
+  background-color: rgb(50, 10, 123);
+  color: white;
+}
+
+/* table media query */
+@media(min-width:330px) and (max-width:676px){
+  .grade_table{
+    max-width: min-content;
+    margin: auto;
+    background-color: aqua;
+    /* width:fit-content; */
+  }
+  mat-table{
+    /* max-width:800px; */
+    /* min-width: 600px; */
+    max-width: fit-content;
+    margin: auto;
+  }
+}
+
+/* report-card media query */
+@media(max-width:1760px){
+  .program{
+    flex-direction: column;
+    /* width: 90%; */
+    margin: auto;
+  }
+  .program_description,.report_card{
+    width: 90%;
+    margin: auto;
+  }
+}
+@media (max-width:1017px) {
+  .cp_t{
+    flex-direction: column;
+    width: max-content;
+    /* margin: 0; */
+  }
+  .report_card{
+    margin: 0;
+    width: 100%;
+  }
 }

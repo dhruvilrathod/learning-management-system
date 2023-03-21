@@ -55,7 +55,7 @@ import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatInputModule} from '@angular/material/input';
 import {MatPaginatorModule} from '@angular/material/paginator';
 import {MatSortModule} from '@angular/material/sort';
-
+import { NgCircleProgressModule } from 'ng-circle-progress';
 
 
 // ############### DO NOT TOUCH ######################
@@ -115,7 +115,13 @@ import {MatSortModule} from '@angular/material/sort';
     MatInputModule,
     MatPaginatorModule,
     MatSortModule,
-
+    NgCircleProgressModule.forRoot({
+      // set defaults here
+      radius: 100,
+      outerStrokeWidth: 16,
+      outerStrokeColor: "#78C000",
+      animationDuration: 300,
+    })
   ],
   providers: [],
   bootstrap: [AppComponent]

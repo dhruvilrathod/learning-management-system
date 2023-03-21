@@ -8,38 +8,23 @@ export interface UserData {
   id: string;
   name: string;
   progress: string;
-  fruit: string;
+  trainer: string;
 }
-const FRUITS: string[] = [
-  'blueberry',
-  'lychee',
-  'kiwi',
-  'mango',
-  'peach',
-  'lime',
-  'pomegranate',
-  'pineapple',
+const TRAINERS: string[] = [
+ 'Rachir sir',
+ 'Pradip sir',
+ 'Ruchit sir',
+ 'Bharat sir',
+ 'Gagan sir',
+ 'Umang sir'
 ];
 const NAMES: string[] = [
-  'Maia',
-  'Asher',
-  'Olivia',
-  'Atticus',
-  'Amelia',
-  'Jack',
-  'Charlotte',
-  'Theodore',
-  'Isla',
-  'Oliver',
-  'Isabella',
-  'Jasper',
-  'Cora',
-  'Levi',
-  'Violet',
-  'Arthur',
-  'Mia',
-  'Thomas',
-  'Elizabeth',
+  'UI',
+  'Devops',
+  'Java',
+  'QA',
+  'Product management',
+  'HR'
 ];
 @Component({
   selector: 'app-my-grades-table',
@@ -47,7 +32,7 @@ const NAMES: string[] = [
   styleUrls: ['./my-grades-table.component.css']
 })
 export class MyGradesTableComponent {
-  displayedColumns: string[] = ['id', 'name', 'progress', 'fruit'];
+  displayedColumns: string[] = ['id', 'name', 'trainer','progress','download'];
   dataSource: MatTableDataSource<UserData>;
 
   @ViewChild(MatPaginator) paginator!: MatPaginator;
@@ -79,16 +64,13 @@ export class MyGradesTableComponent {
 /** Builds and returns a new User. */
 function createNewUser(id: number): UserData {
   const name =
-    NAMES[Math.round(Math.random() * (NAMES.length - 1))] +
-    ' ' +
-    NAMES[Math.round(Math.random() * (NAMES.length - 1))].charAt(0) +
-    '.';
+    NAMES[Math.round(Math.random() * (NAMES.length - 1))];
 
   return {
     id: id.toString(),
     name: name,
     progress: Math.round(Math.random() * 100).toString(),
-    fruit: FRUITS[Math.round(Math.random() * (FRUITS.length - 1))],
+    trainer: TRAINERS[Math.round(Math.random() * (TRAINERS.length - 1))],
   };
 }
 
