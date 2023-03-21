@@ -20,7 +20,8 @@ export class ProgramActivationComponent {
     programImageURL: "string",
     programDescription: "string",
     totalEnrolledStudent: 50,
-    programOutcomes: [1,2,3]},
+    programOutcomes: [1,2,3],
+    overallGrades: "A"},
 
     {programID: "2", 
     programTitle: "Java Development", 
@@ -33,7 +34,8 @@ export class ProgramActivationComponent {
     programImageURL: "string",
     programDescription: "string",
     totalEnrolledStudent: 50,
-    programOutcomes: [1,2,3]},
+    programOutcomes: [1,2,3],
+    overallGrades: "A"},
 
     {programID: "3", 
     programTitle: "Java Development", 
@@ -46,7 +48,8 @@ export class ProgramActivationComponent {
     programImageURL: "string",
     programDescription: "string",
     totalEnrolledStudent: 50,
-    programOutcomes: [1,2,3]},
+    programOutcomes: [1,2,3],
+    overallGrades: "A"},
 
     {programID: "4", 
     programTitle: "Java Development", 
@@ -59,7 +62,8 @@ export class ProgramActivationComponent {
     programImageURL: "string",
     programDescription: "string",
     totalEnrolledStudent: 50,
-    programOutcomes: [1,2,3]},
+    programOutcomes: [1,2,3],
+    overallGrades: "A"},
 
     {programID: "5", 
     programTitle: "Java Development", 
@@ -72,6 +76,7 @@ export class ProgramActivationComponent {
     programImageURL: "string",
     programDescription: "string",
     totalEnrolledStudent: 50,
-    programOutcomes: [1,2,3]}
+    programOutcomes: [1,2,3],
+    overallGrades: "A"}
   ]
 }
