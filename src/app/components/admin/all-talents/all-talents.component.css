@@ -1,6 +1,14 @@
 table{
     width: 80%;
-    background-color: #d6d4d4;
+    background-color: #b1b0b0;
+}
+table td{
+    color: #FEFEFE;
+}
+
+table tr:hover{
+    background-color: #555;
+    cursor: pointer;
 }
 
 h1{

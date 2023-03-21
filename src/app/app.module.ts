@@ -40,7 +40,6 @@ import { FooterComponent } from './components/reusable/footer/footer.component';
 import { ErrorPageComponent } from './components/error-page/error-page.component';
 import { ProfileComponent } from './components/reusable/profile/profile.component';
 
-
 // Angular Materials Imports should be written here
 import { MatCommonModule } from '@angular/material/core';
 import { MatToolbarModule } from '@angular/material/toolbar';
@@ -48,6 +47,9 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatListModule } from '@angular/material/list';
+import {MatFormFieldModule} from '@angular/material/form-field';
+import {MatInputModule} from '@angular/material/input';
+import {MatPaginatorModule} from '@angular/material/paginator';
 // <<<<<<< HEAD
 // import { ProfileComponent } from './components/reusable/profile/profile.component';
 import {MatTableModule} from '@angular/material/table';
@@ -108,7 +110,10 @@ import {MatTableModule} from '@angular/material/table';
     MatButtonModule,
     MatSidenavModule,
     MatListModule,
-    MatTableModule
+    MatTableModule,
+    MatFormFieldModule,
+    MatInputModule,
+    MatPaginatorModule
   ],
   providers: [],
   bootstrap: [AppComponent]
