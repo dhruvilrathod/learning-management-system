@@ -45,5 +45,10 @@ export class AssignRoleComponent implements OnInit {
       return;
     }
     console.log(this.assignRoleForm.value);
+    return {
+      email: this.assignRoleForm.value.email,
+      password: this.assignRoleForm.value.password,
+      privilages: this.selectedOptions,
+    };
   }
 }

@@ -55,6 +55,7 @@
 
       <mat-selection-list #list (selectionChange)="onSelectionChange($event)">
         <mat-list-option
+          class="selectionList"
           *ngFor="let privilage of privilages"
           [value]="privilage.privilage"
         >
@@ -62,10 +63,12 @@
         </mat-list-option>
       </mat-selection-list>
 
-      <p>
-        you have selected {{ list.selectedOptions.selected.length }} Which are
-        {{ selectedOptions | json }}
-      </p>
+      <div class="showSelected">
+        <p>
+          you have selected {{ list.selectedOptions.selected.length }} Which are
+          {{ selectedOptions | json }}
+        </p>
+      </div>
 
       <button mat-flat-button color="primary">Assign / Revoke</button>
     </mat-card-content>

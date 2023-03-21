@@ -3,6 +3,7 @@ mat-card {
   margin: 2em auto;
   text-align: center;
   max-height: 600px;
+  background-color: rgb(219, 219, 255);
 }
 
 .header {
@@ -12,15 +13,6 @@ mat-card {
   width: 40%;
 }
 
-.button-row {
-  padding-top: 5px;
-}
-
-.button-row a {
-  margin-right: 8px;
-  text-align: center;
-}
-
-.emailInput {
-  padding-top: 10px;
+.showSelected {
+  background-color: blanchedalmond;
 }
