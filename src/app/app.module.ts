@@ -38,7 +38,10 @@ import { AddTrainerComponent } from './components/admin/add-trainer/add-trainer.
 import { AssignRoleComponent } from './components/admin/assign-role/assign-role.component';
 import { FooterComponent } from './components/reusable/footer/footer.component';
 import { ErrorPageComponent } from './components/error-page/error-page.component';
-// import { ProfileComponent } from './components/reusable/profile/profile.component';
+import { ProfileComponent } from './components/reusable/profile/profile.component';
+import { ApprovalAcknowledgementComponent } from './components/public/approval-acknowledgement/approval-acknowledgement.component';
+import { ResetPasswordComponent } from './components/public/reset-password/reset-password.component';
+import { ProgramPublicationComponent } from './components/trainer/program-publication/program-publication.component';
 
 // Angular Materials Imports should be written here
 import { MatCommonModule } from '@angular/material/core';
@@ -47,7 +50,6 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatListModule } from '@angular/material/list';
-// import { ProfileComponent } from './components/reusable/profile/profile.component';
 import { MatCardModule } from '@angular/material/card';
 import { MatInputModule } from '@angular/material/input';
 import { ReactiveFormsModule } from '@angular/forms';
@@ -89,7 +91,10 @@ import { MatCheckboxModule } from '@angular/material/checkbox';
     AssignRoleComponent,
     FooterComponent,
     ErrorPageComponent,
-    // ProfileComponent,
+    ProfileComponent,
+    ApprovalAcknowledgementComponent,
+    ResetPasswordComponent,
+    ProgramPublicationComponent,
   ],
 
   // Add whatever you import from materials
