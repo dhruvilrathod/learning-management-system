@@ -1,0 +1,43 @@
+.programs-table {
+    width: 700px !important;
+}
+
+.programs-table-container {
+    max-height: 70vh;
+    overflow: auto;
+}
+
+.programTitle-col {
+    max-width: 30vw;
+    min-width: 30vw;
+    background-color: aqua;
+}
+
+/* .programID-col {
+    max-width: 10vw;
+    min-width: 10vw;
+}
+
+.trainers-col {
+    max-width: 20vw;
+    min-width: 20vw;
+}
+
+.skills-col {
+    max-width: 20vw;
+    min-width: 20vw;
+} */
+
+td {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+tr:not(.example-expanded-row):hover {
+    background: whitesmoke;
+}
+
+tr:not(.example-expanded-row):active {
+    background: #efefef;
+}

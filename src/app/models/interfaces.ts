@@ -40,6 +40,7 @@ export interface Trainer {
 }
 
 export interface Grades {
+    programID: string,
     overallGrades: string,
     gradeDetails: {
         mainSkillName: string,
@@ -56,6 +57,9 @@ export interface Program {
     trainers: string[],
     thumbnailImageURL: string,
     skillsList: string[],
+    isPublished: boolean,
+    isStarted: boolean,
+    isEnded: boolean,
     startDate?: string,
     endDate?: string,
     duration?: string,
@@ -63,5 +67,6 @@ export interface Program {
     programDescription?: string,
     totalEnrolledStudent?: number,
     programOutcomes?: any[],
-    overallGrades: string
+    overallGrades: string,
+    isEnrolled?: boolean,
 }
