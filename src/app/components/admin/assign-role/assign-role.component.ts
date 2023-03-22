@@ -28,25 +28,25 @@ export class AssignRoleComponent implements OnInit {
   @ViewChild(MatSelectionList) myList!: MatSelectionList;
   selectedOptions: string[] = [];
   assignRoleForm!: FormGroup;
-  toggleSelection(obj: any) {
-    this.selected[privilage as keyof privilages] =
-      !this.selected[obj.privilage];
-  }
+  // toggleSelection(obj: any) {
+  //   this.selected[privilage as keyof privilages] =
+  //     !this.selected[obj.privilage];
+  // }
   constructor() {}
 
-  toggleSelectAll() {
-    this.selectAll = !this.selectAll;
-    if (this.selectAll) {
-      this.privilages.forEach((obj) => {
-        this.selected[obj.privilage] = true;
-      });
-    } else {
-      this.selected = {};
-    }
-    this.myList.options.forEach((option) => {
-      option.selected = this.selected[option.value.name];
-    });
-  }
+  // toggleSelectAll() {
+  //   this.selectAll = !this.selectAll;
+  //   if (this.selectAll) {
+  //     this.privilages.forEach((obj) => {
+  //       this.selected[obj.privilage] = true;
+  //     });
+  //   } else {
+  //     this.selected = {};
+  //   }
+  //   this.myList.options.forEach((option) => {
+  //     option.selected = this.selected[option.value.name];
+  //   });
+  // }
 
   ngOnInit() {
     this.assignRoleForm = new FormGroup({
