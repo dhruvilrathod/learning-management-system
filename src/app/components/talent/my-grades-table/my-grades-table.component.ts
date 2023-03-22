@@ -5,10 +5,10 @@ import {MatSort} from '@angular/material/sort';
 import {MatTableDataSource} from '@angular/material/table';
 
 export interface UserData {
-  id: string;
-  name: string;
-  progress: string;
-  trainer: string;
+  programID: string;
+  programTitle: string;
+  progressList: string;
+  trainers: string;
 }
 const TRAINERS: string[] = [
  'Rachir sir',
@@ -32,7 +32,7 @@ const NAMES: string[] = [
   styleUrls: ['./my-grades-table.component.css']
 })
 export class MyGradesTableComponent {
-  displayedColumns: string[] = ['id', 'name', 'trainer','progress','download'];
+  displayedColumns: string[] = ['programID','programTitle','trainers','progressList','download'];
   dataSource: MatTableDataSource<UserData>;
 
   @ViewChild(MatPaginator) paginator!: MatPaginator;
@@ -67,10 +67,10 @@ function createNewUser(id: number): UserData {
     NAMES[Math.round(Math.random() * (NAMES.length - 1))];
 
   return {
-    id: id.toString(),
-    name: name,
-    progress: Math.round(Math.random() * 100).toString(),
-    trainer: TRAINERS[Math.round(Math.random() * (TRAINERS.length - 1))],
+    programID: id.toString(),
+    programTitle: name,
+    progressList: Math.round(Math.random() * 100).toString(),
+    trainers: TRAINERS[Math.round(Math.random() * (TRAINERS.length - 1))],
   };
 }
 

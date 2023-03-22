@@ -1,43 +1,71 @@
-.grade_table{
+.grade_table {
   display: flex;
   flex-direction: column;
   width: 80%;
   margin: auto;
   margin-bottom: 50px;
-} 
-.mat-mdc-form-field {
+}
+
+.programs-table-container {
+  max-height: 70vh;
+  overflow: auto;
+}
+
+/* optional */
+.programTitle-col {
+max-width: 30vw;
+min-width: 30vw;
+}
+
+td {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+tr:not(.row):hover {
+  background: whitesmoke;
+}
+
+/* .mat-mdc-form-field {
   font-size: 14px;
   width: 100%;
-}
-.mdc-data-table__cell,.mdc-data-table__header-cell{
+} */
+
+.mdc-data-table__cell,
+.mdc-data-table__header-cell {
   border-bottom-style: none;
   border-spacing: 30px;
   /* text-align: center; */
 }
-mat-paginator{
+
+mat-paginator {
   padding: 30px;
-}
+} 
 
 /* report card */
-.program{
-  display:flex;
+.program {
+  display: flex;
   /* border:1px solid black; */
-  width:100%;
+  width: 100%;
 }
-.program_description{
+
+.program_description {
   /* border:1px solid black; */
-  width:50%;
+  width: 50%;
   display: flex;
   justify-content: center;
-  color:white;
+  color: white;
   margin: auto;
 }
-.img img{
+
+.img img {
   padding: 30px;
   width: 500px;
   height: 300px;
   border-radius: 50px;
 }
+
 .example-card {
   max-width: 500px;
   height: fit-content;
@@ -45,91 +73,106 @@ mat-paginator{
   border-radius: 25px;
   /* margin-left: 100px; */
 }
-mat-card-header{
+
+mat-card-header {
   padding: 0px;
   text-align: center;
 }
-mat-card-subtitle p{
+
+mat-card-subtitle p {
   margin: 20px 45px 10px;
 }
-mat-card-subtitle{
+
+mat-card-subtitle {
   /* border: 1px solid black; */
   margin-left: 15px;
   display: flex;
   text-align: left;
-  color:white;
+  color: white;
 }
-mat-card-content{
+
+mat-card-content {
   background-color: white;
   border-radius: 25px;
   text-align: justify;
-  padding: 25px;
+  padding: 15px;
   margin: 0px 30px;
   margin-bottom: 20px;
   color: #3f51b5;
 }
-.report_card{
+
+.report_card {
   display: flex;
   flex-direction: column;
   /* border:1px solid black; */
   width: 50%;
   margin: auto;
-  margin-left: -130px ;
+  margin-left: -130px;
 }
-.category{
+
+.category {
   /* border: 1px solid black; */
   display: flex;
   flex-direction: column;
   width: 100%;
 }
+
 /* circle-progress & table */
-.cp_t{
+.cp_t {
   width: 70%;
   display: flex;
   flex-direction: row;
   margin: auto;
 }
+
 /* report-card header */
-.rc_header{
+.rc_header {
   text-align: center;
   padding: 20px;
 }
-.rc_table{
+
+.rc_table {
   border-spacing: 10px;
   /* border:1px solid black; */
   width: 250px;
   margin: auto;
 }
-hr{
-  margin:30px auto;
+
+hr {
+  margin: 30px auto;
   width: 550px;
 }
-.btn{
+
+.btn {
   /* border: 1px solid black; */
   display: flex;
   flex-direction: row;
   margin-top: 40px;
 }
-.download-btn{
+
+.download-btn {
   display: block;
   margin: auto;
 }
-.download-btn:hover{
+
+.download-btn:hover {
   border: 1px solid;
   border-color: #3f51b5;
-  background-color: rgb(50, 10, 123);
+  /* background-color: rgb(50, 10, 123); */
   color: white;
+  transform: scale(1.1,1.1);
 }
 
 /* table media query */
-@media(min-width:330px) and (max-width:676px){
-  .grade_table{
+@media(min-width:330px) and (max-width:676px) {
+  .grade_table {
     max-width: min-content;
     margin: auto;
     background-color: aqua;
     /* width:fit-content; */
   }
-  mat-table{
+
+  mat-table {
     /* max-width:800px; */
     /* min-width: 600px; */
     max-width: fit-content;
@@ -138,24 +181,28 @@ hr{
 }
 
 /* report-card media query */
-@media(max-width:1760px){
-  .program{
+@media(max-width:1760px) {
+  .program {
     flex-direction: column;
     /* width: 90%; */
     margin: auto;
   }
-  .program_description,.report_card{
+
+  .program_description,
+  .report_card {
     width: 90%;
     margin: auto;
   }
 }
+
 @media (max-width:1017px) {
-  .cp_t{
+  .cp_t {
     flex-direction: column;
     width: max-content;
     /* margin: 0; */
   }
-  .report_card{
+
+  .report_card {
     margin: 0;
     width: 100%;
   }
