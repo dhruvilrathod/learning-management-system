@@ -40,6 +40,8 @@ import { AssignRoleComponent } from './components/admin/assign-role/assign-role.
 import { FooterComponent } from './components/reusable/footer/footer.component';
 import { ErrorPageComponent } from './components/error-page/error-page.component';
 import { ProfileComponent } from './components/reusable/profile/profile.component';
+import { ResetPasswordComponent } from './components/public/reset-password/reset-password.component';
+import { ProgramPublicationComponent } from './components/trainer/program-publication/program-publication.component';
 
 
 // Angular Materials Imports should be written here
@@ -54,8 +56,7 @@ import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatTableModule } from '@angular/material/table';
 import { MatSortModule } from '@angular/material/sort';
 import { MatInputModule } from '@angular/material/input';
-
-
+import { ApprovalAcknowledgementComponent } from './components/public/approval-acknowledgement/approval-acknowledgement.component';
 
 // ############### DO NOT TOUCH ######################
 @NgModule({
@@ -93,7 +94,10 @@ import { MatInputModule } from '@angular/material/input';
     AssignRoleComponent,
     FooterComponent,
     ErrorPageComponent,
-    ProfileComponent
+    ProfileComponent,
+    ApprovalAcknowledgementComponent,
+    ResetPasswordComponent,
+    ProgramPublicationComponent
   ],
 
 
