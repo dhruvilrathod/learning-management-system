@@ -53,6 +53,13 @@ import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatListModule } from '@angular/material/list';
 
 
+import {MatTableModule} from '@angular/material/table';
+import {MatFormFieldModule} from '@angular/material/form-field';
+import {MatInputModule} from '@angular/material/input';
+import {MatPaginatorModule} from '@angular/material/paginator';
+import {MatSortModule} from '@angular/material/sort';
+import {MatCheckboxModule} from '@angular/material/checkbox';
+import {MatDialogModule} from '@angular/material/dialog';
 
 
 // ############### DO NOT TOUCH ######################
@@ -92,9 +99,12 @@ import { MatListModule } from '@angular/material/list';
     FooterComponent,
     ErrorPageComponent,
     ProfileComponent,
+<<<<<<< HEAD
+=======
     ApprovalAcknowledgementComponent,
     ResetPasswordComponent,
     ProgramPublicationComponent
+>>>>>>> e83ddada4ea770a43eae3680ad641649e2ebcf08
   ],
 
 
@@ -108,9 +118,16 @@ import { MatListModule } from '@angular/material/list';
     MatIconModule,
     MatButtonModule,
     MatSidenavModule,
-    MatListModule
+    MatListModule,
+    MatTableModule,
+    MatFormFieldModule,
+    MatInputModule,
+    MatPaginatorModule,
+    MatSortModule,
+    MatCheckboxModule,
+    MatDialogModule,
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
 export class AppModule { }
