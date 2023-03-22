@@ -1,9 +1,10 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <div>
   <div class="welcome">
     <p class="welcome-p">Welcome, Disha Rabadiya</p>
   </div>
   <div class="input-table">
-    <mat-form-field class="">
+    <mat-form-field class="search">
       <mat-label>Search</mat-label>
       <input
         matInput
@@ -13,34 +14,34 @@
       />
     </mat-form-field>
 
-    <div class="mat-elevation-z8">
+    <div class="mat-elevation-z8 aprrove-table-container">
       <table mat-table [dataSource]="dataSource" matSort>
         <!-- Checkbox Column --> 
-        
-        <ng-container matColumnDef="select">
-          <mat-checkbox></mat-checkbox>
-          <th mat-header-cell *matHeaderCellDef mat-sort-header>
+        <ng-container matColumnDef="select" sticky>
+          <th mat-header-cell *matHeaderCellDef>
             <mat-checkbox
               (change)="$event ? toggleAllRows() : null"
               [checked]="selection.hasValue() && isAllSelected()"
               [indeterminate]="selection.hasValue() && !isAllSelected()"
               [aria-label]="checkboxLabel()"
+              color="primary"
             >
             </mat-checkbox>
           </th>
-          <td mat-cell *matCellDef="let row" mat-sort-header>
+          <td mat-cell *matCellDef="let row">
             <mat-checkbox
               (click)="$event.stopPropagation()"
               (change)="$event ? selection.toggle(row) : null"
               [checked]="selection.isSelected(row)"
               [aria-label]="checkboxLabel(row)"
+              color = "primary"
             >
             </mat-checkbox>
           </td>
         </ng-container>
 
         <!-- ID Column -->
-        <ng-container matColumnDef="id">
+        <ng-container matColumnDef="id" >
           <th mat-header-cell *matHeaderCellDef mat-sort-header>ID</th>
           <td mat-cell *matCellDef="let row">{{ row.id }}</td>
         </ng-container>
@@ -58,14 +59,20 @@
         </ng-container>
 
         <!-- Fruit Column -->
-        <ng-container matColumnDef="fruit">
+        <ng-container matColumnDef="program">
           <th mat-header-cell *matHeaderCellDef mat-sort-header>Program</th>
           <td mat-cell *matCellDef="let row">{{ row.program }}</td>
         </ng-container>
 
-        <!-- Check Box -->
+        <ng-container matColumnDef="button">
+          <th mat-header-cell *matHeaderCellDef mat-sort-header>Button</th>
+          <td mat-cell *matCellDef="let row">
+            <button mat-icon-button color="primary" class="primary-btn"><i class="fa fa-check " style="color: white;"></i></button>
+            <button mat-icon-button color="warn" class="warn-btn" style="color: white;"><i class="fa fa-times"></i></button>
+          </td>
+        </ng-container>
 
-        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-header-row *matHeaderRowDef="displayedColumns sticky: true"></tr>
         <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
 
         <!-- Row shown when there is no matching data. -->
@@ -76,14 +83,16 @@
         </tr>
       </table>
 
-      <mat-paginator
-        [pageSizeOptions]="[5, 10, 25]"
+      <mat-paginator class="paginator"
+        [pageSizeOptions]="[5, 10, 25, 100]"
         aria-label="Select page of users"
       ></mat-paginator>
     </div>
   </div>
+
+  <!-- BUTTON -->
   <div class="btn-div">
-    <button mat-raised-button color="primary" class="primary" (click)="approve()">Approve</button>
+    <button mat-raised-button color="primary" class="primary">Approve</button>
     <button mat-flat-button color="warn" class="warn">Cancle</button>
   </div>
 </div>

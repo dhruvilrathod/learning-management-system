@@ -11,13 +11,14 @@ export interface UserData {
   name: string;
   program: string;
   email: string;
+  button: any;
 }
 
 /** Constants used to fill up our data base. */
 const PROGRAM: string[] = [
   'Program 1',
   'Program 2',
-  'Program 3',
+  'Program 3',  
   'Program 4',
   'Program 5',
 ];
@@ -38,7 +39,7 @@ const EMAIL: string[] = [
   styleUrls: ['./talent-approval.component.css'],
 })
 export class TalentApprovalComponent implements AfterViewInit {
-  displayedColumns: string[] = ['select','id', 'name', 'email', 'fruit'];
+  displayedColumns: string[] = ['select','id', 'name', 'email', 'program', 'button'];
   dataSource: MatTableDataSource<UserData>;
   selection = new SelectionModel<UserData>(true, []);
 
@@ -84,7 +85,7 @@ export class TalentApprovalComponent implements AfterViewInit {
 
  
 
-  constructor(public dialog: MatDialog) {
+  constructor() {
     // Create 100 users
     const users = Array.from({ length: 100 }, (_, k) => createNewUser(k + 1));
 
@@ -92,13 +93,6 @@ export class TalentApprovalComponent implements AfterViewInit {
     this.dataSource = new MatTableDataSource(users);
 
     
-  }
-  approve() {
-    const dialogRef = this.dialog.open(DialogContentExampleDialog);
-
-    dialogRef.afterClosed().subscribe(result => {
-      console.log(`Dialog result: ${result}`);
-    });
   }
 
   ngAfterViewInit() {
@@ -121,17 +115,13 @@ function createNewUser(id: number): UserData {
   const name =
     NAMES[Math.round(Math.random() * (NAMES.length - 1))]
 
+  const button = "button"
+
   return {
     id: id,
     name: name,
     email: EMAIL[Math.round(Math.random() * (EMAIL.length - 1))],
     program: PROGRAM[Math.round(Math.random() * (PROGRAM.length - 1))],
+    button: button,
   };
 }
-
-@Component({
-  selector: 'app-dialog-approve',
-  templateUrl: 'dialog-approve.component.html',
-  styleUrls: ['./talent-approval.component.css'],
-})
-export class DialogContentExampleDialog {}

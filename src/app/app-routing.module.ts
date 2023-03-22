@@ -14,12 +14,14 @@ import { ErrorPageComponent } from './components/error-page/error-page.component
 import { LandingPageComponent } from './components/public/landing-page/landing-page.component';
 import { LoginComponent } from './components/public/login/login.component';
 import { ProgramDetailsViewComponent } from './components/public/program-details-view/program-details-view.component';
+import { ResetPasswordComponent } from './components/public/reset-password/reset-password.component';
 import { SignUpComponent } from './components/public/sign-up/sign-up.component';
 import { MyProgramsComponent } from './components/reusable/my-programs/my-programs.component';
 import { ProfileComponent } from './components/reusable/profile/profile.component';
 import { MyGradesComponent } from './components/talent/my-grades/my-grades.component';
 import { EvaluateTalentsComponent } from './components/trainer/evaluate-talents/evaluate-talents.component';
 import { ProgramActivationComponent } from './components/trainer/program-activation/program-activation.component';
+import { ProgramPublicationComponent } from './components/trainer/program-publication/program-publication.component';
 
 const routes: Routes = [
   {
@@ -38,6 +40,11 @@ const routes: Routes = [
     pathMatch: 'full'
   },
   {
+    path: 'reset-password',
+    component: ResetPasswordComponent,
+    pathMatch: 'full'
+  },
+  {
     path: 'my-grades',
     component: MyGradesComponent,
     pathMatch: 'full'
@@ -50,6 +57,11 @@ const routes: Routes = [
   {
     path: 'program-details',
     component: ProgramDetailsViewComponent,
+    pathMatch: 'full'
+  },
+  {
+    path: 'program-publication',
+    component: ProgramPublicationComponent,
     pathMatch: 'full'
   },
   {

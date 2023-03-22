@@ -39,6 +39,9 @@ import { AssignRoleComponent } from './components/admin/assign-role/assign-role.
 import { FooterComponent } from './components/reusable/footer/footer.component';
 import { ErrorPageComponent } from './components/error-page/error-page.component';
 import { ProfileComponent } from './components/reusable/profile/profile.component';
+import { ApprovalAcknowledgementComponent } from './components/public/approval-acknowledgement/approval-acknowledgement.component';
+import { ResetPasswordComponent } from './components/public/reset-password/reset-password.component';
+import { ProgramPublicationComponent } from './components/trainer/program-publication/program-publication.component';
 
 
 // Angular Materials Imports should be written here
@@ -96,6 +99,12 @@ import {MatDialogModule} from '@angular/material/dialog';
     FooterComponent,
     ErrorPageComponent,
     ProfileComponent,
+<<<<<<< HEAD
+=======
+    ApprovalAcknowledgementComponent,
+    ResetPasswordComponent,
+    ProgramPublicationComponent
+>>>>>>> e83ddada4ea770a43eae3680ad641649e2ebcf08
   ],
 
 
