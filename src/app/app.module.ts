@@ -39,6 +39,9 @@ import { AssignRoleComponent } from './components/admin/assign-role/assign-role.
 import { FooterComponent } from './components/reusable/footer/footer.component';
 import { ErrorPageComponent } from './components/error-page/error-page.component';
 import { ProfileComponent } from './components/reusable/profile/profile.component';
+import { ApprovalAcknowledgementComponent } from './components/public/approval-acknowledgement/approval-acknowledgement.component';
+import { ResetPasswordComponent } from './components/public/reset-password/reset-password.component';
+import { ProgramPublicationComponent } from './components/trainer/program-publication/program-publication.component';
 
 // Angular Materials Imports should be written here
 import { MatCommonModule } from '@angular/material/core';
@@ -52,12 +55,10 @@ import { MatInputModule } from '@angular/material/input';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatCardModule } from '@angular/material/card';
 import { MatStepperModule } from '@angular/material/stepper';
-// <<<<<<< HEAD
-// import { ProfileComponent } from './components/reusable/profile/profile.component';
 import {MatTableModule} from '@angular/material/table';
-// =======
 
-// >>>>>>> 533091548377b97d7a7f89fee4a1e1b05e630ad4
+
+
 
 
 
@@ -97,7 +98,10 @@ import {MatTableModule} from '@angular/material/table';
     AssignRoleComponent,
     FooterComponent,
     ErrorPageComponent,
-    ProfileComponent
+    ProfileComponent,
+    ApprovalAcknowledgementComponent,
+    ResetPasswordComponent,
+    ProgramPublicationComponent
   ],
 
 

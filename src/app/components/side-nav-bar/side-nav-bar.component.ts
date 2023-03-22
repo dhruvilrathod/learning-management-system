@@ -28,6 +28,11 @@ export class SideNavBarComponent implements OnInit {
       isActive: false
     },
     {
+      route: '/program-publication',
+      name: 'Program Publication',
+      isActive: false
+    },
+    {
       route: '/program-activation',
       name: 'Program Activation',
       isActive: false

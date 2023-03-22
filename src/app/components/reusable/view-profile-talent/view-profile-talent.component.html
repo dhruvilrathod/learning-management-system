@@ -30,16 +30,16 @@
       </mat-card>
 
       <!-- Talent profile full detail -->
-      <mat-stepper class="talent-detail-stepper" orientation="horizontal">
+      <mat-stepper class="talent-detail-stepper" orientation="vertical">
         <mat-step>
-          <ng-template matStepLabel>Step 1</ng-template>
+          <ng-template matStepLabel>Basic Details</ng-template>
           <ng-template matStepContent>
             <p>This content was rendered lazily</p>
             <button mat-button matStepperNext>Next</button>
           </ng-template>
         </mat-step>
         <mat-step>
-          <ng-template matStepLabel>Step 2</ng-template>
+          <ng-template matStepLabel>Educational Details</ng-template>
           <ng-template matStepContent>
             <p>This content was also rendered lazily</p>
             <button mat-button matStepperPrevious>Back</button>
@@ -47,7 +47,7 @@
           </ng-template>
         </mat-step>
         <mat-step>
-          <ng-template matStepLabel>Step 3</ng-template>
+          <ng-template matStepLabel>Skills</ng-template>
           <p>This content was rendered eagerly</p>
           <button mat-button matStepperPrevious>Back</button>
         </mat-step>
