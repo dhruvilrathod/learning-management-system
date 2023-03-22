@@ -48,6 +48,9 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatListModule } from '@angular/material/list';
+import { ApprovalAcknowledgementComponent } from './components/public/approval-acknowledgement/approval-acknowledgement.component';
+import { ResetPasswordComponent } from './components/public/reset-password/reset-password.component';
+import { ProgramPublicationComponent } from './components/trainer/program-publication/program-publication.component';
 
 
 
@@ -88,7 +91,10 @@ import { MatListModule } from '@angular/material/list';
     AssignRoleComponent,
     FooterComponent,
     ErrorPageComponent,
-    ProfileComponent
+    ProfileComponent,
+    ApprovalAcknowledgementComponent,
+    ResetPasswordComponent,
+    ProgramPublicationComponent
   ],
 
 
