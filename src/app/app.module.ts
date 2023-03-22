@@ -54,7 +54,6 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatCardModule } from '@angular/material/card';
-import { MatStepperModule } from '@angular/material/stepper';
 import {MatTableModule} from '@angular/material/table';
 
 
@@ -121,7 +120,7 @@ import {MatTableModule} from '@angular/material/table';
     MatInputModule,
     MatPaginatorModule,
     MatCardModule,
-    MatStepperModule
+    
   ],
   providers: [],
   bootstrap: [AppComponent]

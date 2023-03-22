@@ -30,28 +30,37 @@
       </mat-card>
 
       <!-- Talent profile full detail -->
-      <mat-stepper class="talent-detail-stepper" orientation="vertical">
-        <mat-step>
-          <ng-template matStepLabel>Basic Details</ng-template>
-          <ng-template matStepContent>
-            <p>This content was rendered lazily</p>
-            <button mat-button matStepperNext>Next</button>
-          </ng-template>
-        </mat-step>
-        <mat-step>
-          <ng-template matStepLabel>Educational Details</ng-template>
-          <ng-template matStepContent>
-            <p>This content was also rendered lazily</p>
-            <button mat-button matStepperPrevious>Back</button>
-            <button mat-button matStepperNext>Next</button>
-          </ng-template>
-        </mat-step>
-        <mat-step>
-          <ng-template matStepLabel>Skills</ng-template>
-          <p>This content was rendered eagerly</p>
-          <button mat-button matStepperPrevious>Back</button>
-        </mat-step>
-      </mat-stepper>
+      <mat-card class="talent-personal-details-section info-section">
+          <h2>Personal details</h2>
+          <hr>
+          <p><span>Name:</span> {{talentData.fullName}}</p>
+          <p><span>Email:</span> {{talentData.email}}</p>
+          <p><span>Age: </span> {{talentData.age}}</p>
+          <p><span>Gender:</span> {{talentData.gender}}</p>
+          <p><span>Country:</span> {{talentData.country}}</p>
+          <h2>Education details</h2>
+          <hr>
+          <p><span>Degree:</span> {{talentData.degree}}</p>
+          <p><span>University:</span> {{talentData.university}}</p>
+          <p><span>Year of passing: </span> {{talentData.yearOfPassing}}</p>
+      </mat-card>
+      <mat-card class="talent-professional-details-section info-section">
+        <h2>Professional details</h2>
+        <hr>
+        <p><span>Current status:</span> {{talentData.currentStatus}}</p>
+        <p><span>Professional background:</span> {{talentData.professionalBackground}}</p>
+        <p><span>Industry: </span> {{talentData.industry}}</p>
+        <p><span>Years of experience:</span> {{talentData.yearsOfExperience}}</p>
+        <h2>Skills</h2>
+        <p><span>Technical:</span></p>
+        <p>{{talentData.skills.technical}}</p>
+        <p><span>Non-technical</span></p>
+        <p>{{talentData.skills.nonTechnical}}</p>
+        <p><span>Current employer: </span>{{talentData.currentEmployer}}</p>
+        <p><span>Linkedin: </span><a href={{talentData.linkedin}} target="_blank">{{talentData.linkedin}}</a></p>
+        <p><span>Recorded video link: </span><a href={{talentData.recordedVideo}}>{{talentData.recordedVideo}}</a></p>
+    </mat-card>
+
 </div>
 
   

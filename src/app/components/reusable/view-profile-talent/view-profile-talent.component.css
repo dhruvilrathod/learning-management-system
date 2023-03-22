@@ -30,9 +30,23 @@
     margin-top: 0.5em;
 }
 
-/* Stepper */
+/* Talent info sections */
 
-.talent-detail-stepper{
-    width: 60%;
+.info-section{
+    margin-left: 0.7em;
+    width: 25%;
+    padding: 1em;
+}
+
+h2{
+    margin-bottom: 0;
+}
+hr{
+    width: 100%;
+}
+
+span{
+    font-weight: 500;
+    color: #000;
 }
 
