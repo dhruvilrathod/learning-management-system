@@ -1,7 +1,10 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 
 import { FormGroup, FormControl, Validators } from '@angular/forms';
-import { MatSelectionListChange } from '@angular/material/list';
+import {
+  MatSelectionList,
+  MatSelectionListChange,
+} from '@angular/material/list';
 
 @Component({
   selector: 'app-assign-role',
@@ -20,9 +23,30 @@ export class AssignRoleComponent implements OnInit {
     { privilage: 'Add Program' },
     { privilage: 'Add Trainer' },
   ];
+  selected = {};
+  selectAll: boolean = false;
+  @ViewChild(MatSelectionList) myList!: MatSelectionList;
   selectedOptions: string[] = [];
   assignRoleForm!: FormGroup;
+  toggleSelection(obj: any) {
+    this.selected[privilage as keyof privilages] =
+      !this.selected[obj.privilage];
+  }
   constructor() {}
+
+  toggleSelectAll() {
+    this.selectAll = !this.selectAll;
+    if (this.selectAll) {
+      this.privilages.forEach((obj) => {
+        this.selected[obj.privilage] = true;
+      });
+    } else {
+      this.selected = {};
+    }
+    this.myList.options.forEach((option) => {
+      option.selected = this.selected[option.value.name];
+    });
+  }
 
   ngOnInit() {
     this.assignRoleForm = new FormGroup({
