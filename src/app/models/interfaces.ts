@@ -1,20 +1,21 @@
 export interface Talent {
     personalDetails: {
-        talentName: string,
-        talentID: string,
-        talentGender: string,
-        countryOfResidence: string,
-        birthDate: string,    
+        name: string,
+        id?: string,
+        gender: string,
+        countryName: string,
+        age: string,
     }
     professionalDetails: {
-        currentWorkingStatus: string,
         currentProfessionalStatus: string;
-        typeOfIndustries: string [],
-        yearsOfExperience: string,
+        industryType: string,
+        yearOfExperience: string,
         skills: any[],
-        currentEmployer: string,
-        linkedInProfileURL: string,
-        recordedVideoURL: string,    
+        currentEmployerName: string,
+        linkedInProfileLink: string,
+        recordedVideoLink: string,
+        experienceInIT: string,
+        experienceLevel: number
     }
     educationDetails: {
         nameOfDegree: string,
@@ -22,46 +23,58 @@ export interface Talent {
         yearOfPassing: number
     }[],
     knownLanguages: string[],
-    experienceInIT: string,
-    experienceLevel: number,
-    expectedSpecializations: string[],
-    expectedSkill: string,
-    profilePictureURL: string,
-    username: string,
+    fieldSpecialization: string[],
+    skillSpecialization: string,
+    profileImage: string,
+    email: string,
+    password: string,
 }
 
 export interface Trainer {
-    trainerName: string;
-    trainerID: string;
-    assignedProgramNames: string[],
-    yearsOfExperience: number,
-    emailOfTrainer: string,
-    profilePicURL: string
+    name: string;
+    id: string;
+    programs: any[],
+    yearOfExperience: string,
+    email: string,
+    profileImage: string
 }
 
 export interface Grades {
+    talentName: string,
+    programName: string,
+    talentID?: string,
+    programID?: string,
     overallGrades: string,
     gradeDetails: {
         mainSkillName: string,
+        mainSkillID: string,
         subSkills: {
-            subskillName:string,
-            subSkillScore: string 
+            subSkillID: string,
+            subSkillName: string,
+            subSkillScore: string
         }[]
     }[]
 }
 
 export interface Program {
-    programTitle: string,
-    programID: string,
+    id: string,
+    name: string,
     trainers: string[],
     thumbnailImageURL: string,
-    skillsList: string[],
-    startDate?: string,
-    endDate?: string,
+    skillsList: any[],
+    programTracking: {
+        isPublished: boolean,
+        isStarted: boolean,
+        isEnded: boolean,
+        startDate?: string,
+        endDate?: string
+    }
     duration?: string,
-    programImageURL?: string,
-    programDescription?: string,
+    image?: string,
+    programOverview?: string,
     totalEnrolledStudent?: number,
-    programOutcomes?: any[],
-    overallGrades: string
+    programOutcomes?: string,
+    overallGrades: string,
+    isEnrolled?: boolean,
+    grades?: Grades
 }
