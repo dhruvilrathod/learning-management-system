@@ -34,7 +34,7 @@ export interface Trainer {
     name: string;
     id: string;
     programs: any[],
-    yearsOfExperience: number,
+    yearOfExperience: string,
     email: string,
     profileImage: string
 }

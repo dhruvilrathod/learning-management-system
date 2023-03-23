@@ -16,8 +16,12 @@ import { LoginComponent } from './components/public/login/login.component';
 import { ProgramDetailsViewComponent } from './components/public/program-details-view/program-details-view.component';
 import { ResetPasswordComponent } from './components/public/reset-password/reset-password.component';
 import { SignUpComponent } from './components/public/sign-up/sign-up.component';
+import { EditProfileTalentComponent } from './components/reusable/edit-profile-talent/edit-profile-talent.component';
+import { EditProfileTrainerComponent } from './components/reusable/edit-profile-trainer/edit-profile-trainer.component';
 import { MyProgramsComponent } from './components/reusable/my-programs/my-programs.component';
 import { ProfileComponent } from './components/reusable/profile/profile.component';
+import { ProgramGradesDetailsComponent } from './components/reusable/program-grades-details/program-grades-details.component';
+import { MyGradesTableComponent } from './components/talent/my-grades-table/my-grades-table.component';
 import { MyGradesComponent } from './components/talent/my-grades/my-grades.component';
 import { EvaluateTalentsComponent } from './components/trainer/evaluate-talents/evaluate-talents.component';
 import { EvaluationSheetComponent } from './components/trainer/evaluation-sheet/evaluation-sheet.component';
@@ -52,7 +56,11 @@ const routes: Routes = [
   {
     path: 'my-grades',
     component: MyGradesComponent,
-    pathMatch: 'full',
+    data: { 'title': 'LMS | My Grades' }
+  },
+  {
+    path: 'my-grades/:programID',
+    component: ProgramGradesDetailsComponent,
     data: { 'title': 'LMS | My Grades' }
   },
   {
@@ -164,13 +172,42 @@ const routes: Routes = [
     pathMatch: 'full',
     data: { 'title': 'LMS | Profile' }
   },
-
+  {
+    path: 'profile/talent/edit',
+    component: EditProfileTalentComponent,
+    pathMatch: 'full',
+    data: { 'title': 'LMS | Profile' }
+  },
+  {
+    path: 'profile/trainer/edit',
+    component: EditProfileTalentComponent,
+    pathMatch: 'full',
+    data: { 'title': 'LMS | Profile' }
+  },
+  {
+    path: 'all-talents/edit/:talentID',
+    component: EditProfileTalentComponent,
+    pathMatch: 'full',
+    data: { 'title': 'LMS | Edit Talent' }
+  },
+  {
+    path: 'all-trainers/edit/:trainerID',
+    component: EditProfileTrainerComponent,
+    pathMatch: 'full',
+    data: { 'title': 'LMS | Edit Trainer' }
+  },
+  {
+    path: 'all-programs/edit/:programID',
+    component: AddProgramComponent,
+    pathMatch: 'full',
+    data: { 'title': 'LMS | Edit Program' }
+  },
   {
     path: 'error-page',
     component: ErrorPageComponent,
     data: { 'title': 'LMS | Error' }
   },
-  // { path: '**', redirectTo: 'error-page' }
+  { path: '**', redirectTo: 'error-page' }
 ];
 
 @NgModule({
