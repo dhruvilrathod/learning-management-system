@@ -1,15 +1,17 @@
 import { HttpClient } from '@angular/common/http';
-import { Component, OnInit, ViewChild } from '@angular/core';
+import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { MatPaginator } from '@angular/material/paginator';
 import { MatSort } from '@angular/material/sort';
 import { MatTableDataSource } from '@angular/material/table';
-import { ActivatedRoute, Router } from '@angular/router';
+import { ActivatedRoute } from '@angular/router';
 import { Grades } from 'src/app/models/interfaces';
+import * as XLSX from 'xlsx';
 
 @Component({
   selector: 'app-evaluation-sheet',
   templateUrl: './evaluation-sheet.component.html',
-  styleUrls: ['./evaluation-sheet.component.css']})
+  styleUrls: ['./evaluation-sheet.component.css']
+})
 export class EvaluationSheetComponent implements OnInit {
 
   public programID!: string;
@@ -26,6 +28,7 @@ export class EvaluationSheetComponent implements OnInit {
 
   @ViewChild(MatPaginator) paginator!: MatPaginator;
   @ViewChild(MatSort) sort!: MatSort;
+  @ViewChild('TABLE') table!: ElementRef;
 
   constructor(
     private _http: HttpClient,
@@ -36,7 +39,7 @@ export class EvaluationSheetComponent implements OnInit {
     this._activatedRoute.params.subscribe((d: any) => {
       this.programID = d.programID;
     })
-    
+
     this._http.get('./assets/programs-with-grades.json').subscribe((d: any) => {
       console.log(this.programID);
       console.log(d);
@@ -102,7 +105,7 @@ export class EvaluationSheetComponent implements OnInit {
         console.log(this.data);
         console.log(this.displayedColumnsMain);
         console.log(this.displayedColumnsSub);
-        
+
 
         this.dataSource = new MatTableDataSource(this.data);
         this.dataSource.paginator = this.paginator;
@@ -119,7 +122,14 @@ export class EvaluationSheetComponent implements OnInit {
     }
   }
 
-  test(e:any, talentID:string) {
+  test(e: any, talentID: string) {
     console.log(e.target.value, talentID, this.programID);
+  }
+
+  exportAsExcel() {
+    const ws: XLSX.WorkSheet = XLSX.utils.table_to_sheet(this.table.nativeElement);
+    const wb: XLSX.WorkBook = XLSX.utils.book_new();
+    XLSX.utils.book_append_sheet(wb, ws, 'Sheet1');
+    XLSX.writeFile(wb, 'evaluation.xlsx');
   }
 }

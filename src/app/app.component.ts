@@ -14,6 +14,9 @@ export class AppComponent implements OnInit {
   title = 'learning-management-system';
 
   public smallScreen: boolean = false;
+  public showHeaderNavBar: boolean = false;
+  public showSideNavBar: boolean = false;
+  public showRouterOutlet: boolean = false;
 
   constructor(
     public router: Router,
@@ -28,7 +31,22 @@ export class AppComponent implements OnInit {
     else this.smallScreen = true;
 
     this.router.events.subscribe((e: any) => {
+
       if (e instanceof NavigationEnd) {
+        console.log(this.router.url);
+        if(this.router.url !== '/login' && this.router.url !== '/sign-up' && this.router.url !== '/course-details' && this.router.url !== '/error-page' && this.router.url !== '/reset-password' && this.router.url !== '/program-details' && this.router.url !== '/') {
+          this.showSideNavBar = true;
+        }
+        else this.showSideNavBar = false;
+        
+        if(this.router.url !== '/login' && this.router.url !== '/sign-up') this.showHeaderNavBar = true;
+        else this.showHeaderNavBar = false;
+
+        if(this.router.url.includes('/reset-password')) {
+          this.showHeaderNavBar = false;
+          this.showSideNavBar = false;
+        }
+
         var rt = this.getChild(this._activatedRoute)
         rt.data.subscribe((data: any) => {
           this._title.setTitle(data.title)

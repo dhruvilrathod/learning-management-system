@@ -27,7 +27,7 @@
         <div style="display: flex; align-items: center; gap: 5px;">
             <mat-icon>check</mat-icon>Saved!
         </div>
-        <button class="tab-container-button" mat-raised-button color="primary">
+        <button class="tab-container-button" mat-raised-button color="primary" (click)="exportAsExcel()">
             <mat-icon>download</mat-icon> Download
         </button>
         <button class="tab-container-button" mat-raised-button color="primary">
@@ -38,7 +38,7 @@
 
 
     <div class="table-container">
-        <div class="programs-table-container">
+        <div class="programs-table-container" #TABLE>
             <table mat-table [dataSource]="dataSource" matSort>
 
                 <ng-container *ngFor="let c of subColumns; let i = index" matColumnDef="{{c.id}}" [sticky]="i == 0">
@@ -49,6 +49,7 @@
                                 <input matInput title="{{row[subColumns[0].id]}}, {{c.name}}" type="text"
                                     [value]="row[c.id]" (change)="test($event, row.talentID)" />
                             </mat-form-field>
+                                <span style="display: none;">{{row[c.id]}}</span>
                         </td>
                     </div>
                     <div *ngIf="i == 0">

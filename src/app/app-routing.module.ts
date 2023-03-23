@@ -45,9 +45,8 @@ const routes: Routes = [
     data: { 'title': 'LMS | Sign Up' }
   },
   {
-    path: 'reset-password',
+    path: 'reset-password/:token',
     component: ResetPasswordComponent,
-    pathMatch: 'full',
     data: { 'title': 'LMS | Password Reset' }
   },
   {
