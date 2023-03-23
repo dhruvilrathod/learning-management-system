@@ -1,8 +1,8 @@
 <app-header-nav-bar *ngIf="router.url !== '/login' && router.url !== '/sign-up' && router.url !== '/reset-password'"></app-header-nav-bar>
 
 <app-side-nav-bar
-    *ngIf="router.url !== '/login' && router.url !== '/sign-up' && router.url !== '/course-details' && router.url !== '/error-page' && router.url !== '/reset-password' && router.url !== '/'">
+    *ngIf="router.url !== '/login' && router.url !== '/sign-up' && router.url !== '/course-details' && router.url !== '/error-page' && router.url !== '/reset-password' && router.url !== '/program-details' && router.url !== '/'">
 </app-side-nav-bar>
 
 <router-outlet
-    *ngIf="router.url == '/login' || router.url == '/sign-up' || router.url == '/course-details' || router.url == '/error-page' || router.url == '/reset-password' || router.url == '/'"></router-outlet>
+    *ngIf="router.url == '/login' || router.url == '/sign-up' || router.url == '/course-details' || router.url == '/error-page' || router.url == '/reset-password' || router.url == '/program-details' || router.url == '/'"></router-outlet>

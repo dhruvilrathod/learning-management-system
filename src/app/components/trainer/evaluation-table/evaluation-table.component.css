@@ -1,11 +1,12 @@
 .programs-table-container {
-    max-height: 70vh;
+    max-height: calc(100vh - 24vh - 80px - 64px);
     overflow: auto;
 }
 
 .programTitle-col {
     max-width: 30vw;
     min-width: 30vw;
+    cursor: pointer;
 }
 
 td {
@@ -16,4 +17,60 @@ td {
 
 tr:not(.row):hover {
     background: whitesmoke;
+}
+
+.table-input {
+    width: 70px;
+    margin-bottom: -1.25em;
+}
+
+.tab-heading {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    height: calc(8vh - 40px);
+    margin: 0 0 12px 0;
+    background-color: white;
+    border-radius: 20px;
+    border: 1px solid lightgray;
+}
+
+.tab-container {
+    padding: 20px;
+    overflow: auto;
+    height: calc(100vh - 8vh - 80px - 64px);
+    background-color: white;
+    border-radius: 20px;
+    border: 1px solid lightgray;
+}
+
+.tab-heading-text {
+    font-size: x-large;
+    text-align: center;
+    font-weight: 500;
+}
+
+.tab-heading-back-button {
+    margin-right: 20px;
+}
+
+.tab-container-flex {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.tab-container-button {
+    margin: 10px;
+}
+
+.tab-container-flex-grow {
+    flex-grow: 1;
+}
+
+.table-container {
+    overflow: auto;
+    padding: 10px;
+    border-radius: 20px;
+    border: 1px solid lightgray;
 }

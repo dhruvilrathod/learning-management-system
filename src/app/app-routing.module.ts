@@ -20,6 +20,8 @@ import { MyProgramsComponent } from './components/reusable/my-programs/my-progra
 import { ProfileComponent } from './components/reusable/profile/profile.component';
 import { MyGradesComponent } from './components/talent/my-grades/my-grades.component';
 import { EvaluateTalentsComponent } from './components/trainer/evaluate-talents/evaluate-talents.component';
+import { EvaluationSheetComponent } from './components/trainer/evaluation-sheet/evaluation-sheet.component';
+import { EvaluationTableComponent } from './components/trainer/evaluation-table/evaluation-table.component';
 import { ProgramActivationComponent } from './components/trainer/program-activation/program-activation.component';
 import { ProgramPublicationComponent } from './components/trainer/program-publication/program-publication.component';
 
@@ -27,110 +29,149 @@ const routes: Routes = [
   {
     path: '',
     component: LandingPageComponent,
-    pathMatch: 'full'
+    pathMatch: 'full',
+    data: { 'title': 'LMS | Home' }
   },
   {
     path: 'login',
     component: LoginComponent,
-    pathMatch: 'full'
+    pathMatch: 'full',
+    data: { 'title': 'LMS | Login' }
   },
   {
     path: 'sign-up',
     component: SignUpComponent,
-    pathMatch: 'full'
+    pathMatch: 'full',
+    data: { 'title': 'LMS | Sign Up' }
   },
   {
     path: 'reset-password',
     component: ResetPasswordComponent,
-    pathMatch: 'full'
+    pathMatch: 'full',
+    data: { 'title': 'LMS | Password Reset' }
   },
   {
     path: 'my-grades',
     component: MyGradesComponent,
-    pathMatch: 'full'
+    pathMatch: 'full',
+    data: { 'title': 'LMS | My Grades' }
   },
   {
     path: 'my-programs',
     component: MyProgramsComponent,
-    pathMatch: 'full'
+    pathMatch: 'full',
+    data: { 'title': 'LMS | My Programs' }
   },
   {
     path: 'program-details',
     component: ProgramDetailsViewComponent,
-    pathMatch: 'full'
+    pathMatch: 'full',
+    data: { 'title': 'LMS | Program Details' }
   },
   {
     path: 'program-publication',
     component: ProgramPublicationComponent,
-    pathMatch: 'full'
+    pathMatch: 'full',
+    data: { 'title': 'LMS | Program Publication' }
   },
   {
     path: 'program-activation',
     component: ProgramActivationComponent,
-    pathMatch: 'full'
+    pathMatch: 'full',
+    data: { 'title': 'LMS | Program Activation' }
   },
   {
     path: 'evaluation',
-    component: EvaluateTalentsComponent,
-    pathMatch: 'full'
+    redirectTo: 'evaluation/programs'
+
+  },
+  {
+    path: 'evaluation',
+    children: [
+      {
+        path: 'evaluation-sheet/:programID',
+        component: EvaluationSheetComponent,
+        data: { 'title': 'LMS | Evaluation Sheet' }
+      },
+      {
+        path: 'programs',
+        component: EvaluationTableComponent,
+        data: { 'title': 'LMS | Evaluation' }
+      }
+    ]
   },
   {
     path: 'dashboard-home',
     component: DashboardHomeComponent,
-    pathMatch: 'full'
+    pathMatch: 'full',
+    data: { 'title': 'LMS | Dashboard Home' }
   },
   {
     path: 'all-talents',
     component: AllTalentsComponent,
-    pathMatch: 'full'
+    pathMatch: 'full',
+    data: { 'title': 'LMS | All Talents' }
   },
   {
     path: 'all-programs',
     component: AllProgramsComponent,
-    pathMatch: 'full'
-  },{
+    pathMatch: 'full',
+    data: { 'title': 'LMS | All Programs' }
+  }, {
     path: 'all-trainers',
     component: AllTrainersComponent,
-    pathMatch: 'full'
+    pathMatch: 'full',
+    data: { 'title': 'LMS | All Trainers' }
   },
   {
     path: 'enrollment-approvals',
     component: EnrollmentApprovalComponent,
-    pathMatch: 'full'
+    pathMatch: 'full',
+    data: { 'title': 'LMS | Enrollment Approvals' }
   },
   {
     path: 'talent-approvals',
     component: TalentApprovalComponent,
-    pathMatch: 'full'
+    pathMatch: 'full',
+    data: { 'title': 'LMS | Talent Approvals' }
   },
   {
     path: 'add-program',
     component: AddProgramComponent,
-    pathMatch: 'full'
+    pathMatch: 'full',
+    data: { 'title': 'LMS | Add Program' }
   },
   {
     path: 'add-trainer',
     component: AddTrainerComponent,
-    pathMatch: 'full'
+    pathMatch: 'full',
+    data: { 'title': 'LMS | Add Trainer' }
   },
   {
     path: 'settings',
     component: SettingsComponent,
-    pathMatch: 'full'
+    pathMatch: 'full',
+    data: { 'title': 'LMS | Settings' }
   },
   {
     path: 'assign-role',
     component: AssignRoleComponent,
-    pathMatch: 'full'
+    pathMatch: 'full',
+    data: { 'title': 'LMS | Role Assignments' }
   },
   {
     path: 'profile',
     component: ProfileComponent,
-    pathMatch: 'full'
+    pathMatch: 'full',
+    data: { 'title': 'LMS | Profile' }
   },
-  
-  { path: 'error-page', component: ErrorPageComponent },
-  { path: '**', redirectTo: 'error-page' }
+
+  {
+    path: 'error-page',
+    component: ErrorPageComponent,
+    data: { 'title': 'LMS | Error' }
+  },
+  // { path: '**', redirectTo: 'error-page' }
 ];
 
 @NgModule({
