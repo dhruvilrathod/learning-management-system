@@ -13,7 +13,7 @@ html, body {
 
 /* Styles for dashboard and its containers */
 .programs-table-container {
-    max-height: calc(100vh - 24vh - 80px - 64px);
+    max-height: calc(100vh - 24vh - 100px - 64px);
     overflow: auto;
 }
 
