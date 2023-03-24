@@ -42,7 +42,7 @@ tr:not(.row):hover {
     display: flex;
     align-items: center;
     padding: 20px;
-    height: calc(8vh - 40px);
+    height: calc(8vh - 44px);
     margin: 0 0 12px 0;
     background-color: white;
     border-radius: 20px;
@@ -52,7 +52,7 @@ tr:not(.row):hover {
 .tab-container {
     padding: 20px;
     overflow: auto;
-    height: calc(100vh - 8vh - 80px - 64px);
+    height: calc(100vh - 8vh - 76px - 64px);
     background-color: white;
     border-radius: 20px;
     border: 1px solid lightgray;
