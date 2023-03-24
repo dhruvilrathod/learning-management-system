@@ -1,12 +1,22 @@
-<!-- My grades -->
-<div class="grade_table">
-  <!-- My grade filter -->
-  <mat-form-field appearance="outline">
-    <mat-label>Filter</mat-label>
-    <input matInput (keyup)="applyFilter($event)" placeholder="Value" #input></mat-form-field>
-  <!-- table view -->
-  <div class="mat-elevation-z8">
-    <div class="programs-table-container mat-elevation-z8">
+<div class="tab-heading">
+  <div class="tab-heading-text">
+    My Grades
+  </div>
+</div>
+
+<div class="tab-container">
+
+  <div class="tab-container-flex">
+    <div class="tab-container-flex-grow">
+      <mat-form-field appearance="outline">
+        <mat-label>Filter</mat-label>
+        <input matInput (keyup)="applyFilter($event)" placeholder="Value" #input>
+      </mat-form-field>
+    </div>
+  </div>
+
+  <div class="table-container">
+    <div class="programs-table-container">
       <table mat-table [dataSource]="dataSource" matSort>
         <!-- Title column -->
         <ng-container matColumnDef="programTitle">
@@ -22,11 +32,11 @@
         <ng-container matColumnDef="trainers">
           <th mat-header-cell *matHeaderCellDef mat-sort-header> Trainers </th>
           <td mat-cell *matCellDef="let row" class="trainers-col"> {{row.trainers}} </td>
-        <!-- Progress -->
+          <!-- Progress -->
         </ng-container> <ng-container matColumnDef="progressList">
           <th mat-header-cell *matHeaderCellDef mat-sort-header> Progress </th>
           <td mat-cell *matCellDef="let row" class="skills-col"> {{row.progressList}}% </td>
-        <!-- Download -->
+          <!-- Download -->
         </ng-container><ng-container matColumnDef="download">
           <th mat-header-cell *matHeaderCellDef mat-sort-header> Download </th>
           <td mat-cell *matCellDef="let row" class="download-button-col"> <button mat-raised-button
@@ -40,58 +50,10 @@
         </tr>
       </table>
     </div>
-    <mat-paginator [pageSizeOptions]="[5, 10, 25, 100]" aria-label="Select page of users"></mat-paginator>
   </div>
-  <!-- <mat-form-field>
-    <mat-label>Filter</mat-label>
-    <input matInput (keyup)="applyFilter($event)" placeholder="Ex. Mia" #input>
-  </mat-form-field> -->
-  <!-- My grade table -->
-  <!-- <div class="mat-elevation-z8">
-    <table mat-table [dataSource]="dataSource" matSort> -->
-
-  <!-- ID Column -->
-  <!-- <ng-container matColumnDef="id">
-        <th mat-header-cell *matHeaderCellDef mat-sort-header> No. </th>
-        <td mat-cell *matCellDef="let row"> {{row.id}} </td>
-      </ng-container> -->
-
-  <!-- Progress Column -->
-  <!-- <ng-container matColumnDef="progress">
-        <th mat-header-cell *matHeaderCellDef mat-sort-header> Progress </th>
-        <td mat-cell *matCellDef="let row"> {{row.progress}}% </td>
-      </ng-container> -->
-
-  <!-- Name Column -->
-  <!-- <ng-container matColumnDef="name">
-        <th mat-header-cell *matHeaderCellDef mat-sort-header> Program Name </th>
-        <td mat-cell *matCellDef="let row"> {{row.name}} </td>
-      </ng-container> -->
-
-  <!-- Trainer Column -->
-  <!-- <ng-container matColumnDef="trainer">
-        <th mat-header-cell *matHeaderCellDef mat-sort-header> Trainer </th>
-        <td mat-cell *matCellDef="let row"> {{row.trainer}} </td>
-      </ng-container> -->
-
-  <!-- Download Column -->
-  <!-- <ng-container matColumnDef="download">
-        <th mat-header-cell *matHeaderCellDef mat-sort-header> Download Certificate</th>
-        <td mat-cell *matCellDef="let row"><a href="">Download </a></td>
-      </ng-container>
-
-      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
-      <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr> -->
-
-  <!-- Row shown when there is no matching data. -->
-  <!-- <tr class="mat-row" *matNoDataRow>
-        <td class="mat-cell" colspan="4">No data matching the filter "{{input.value}}"</td>
-      </tr>
-    </table> -->
-
-  <!-- <mat-paginator [pageSizeOptions]="[5, 10, 25, 100]" aria-label="Select page of users"></mat-paginator>
-  </div> -->
+  <mat-paginator class="paginator" [pageSizeOptions]="[10, 25, 100]" aria-label="Select page of users"></mat-paginator>
 </div>
+
 
 <div class="program">
   <!-- Program Description -->
@@ -123,10 +85,10 @@
     </mat-card>
   </div>
   <!-- Report card -->
-  <div class="report_card">
-    <div class="category">
-      <!-- Technical scenario -->
-      <div class="tech">
+  <!-- <div class="report_card"> -->
+  <!-- <div class="category"> -->
+  <!-- Technical scenario -->
+  <!-- <div class="tech">
         <h1 class="rc_header">Technical Aspects</h1>
         <div class="cp_t">
           <circle-progress [percent]="75" [radius]="100" [showSubtitle]="true" [outerStrokeWidth]="10"
@@ -161,9 +123,9 @@
           </table>
         </div>
       </div>
-      <hr>
-      <!-- Non-Techanical scenario -->
-      <div class="non-tech">
+      <hr> -->
+  <!-- Non-Techanical scenario -->
+  <!-- <div class="non-tech">
         <h1 class="rc_header">Non Technical Aspects</h1>
         <div class="cp_t">
           <circle-progress [percent]="100" [radius]="100" [showSubtitle]="true" [outerStrokeWidth]="10"
@@ -185,10 +147,96 @@
           </table>
         </div>
       </div>
+    </div> -->
+  <!-- <div class="btn"> -->
+  <!-- <button class="download-btn">Download Report Card</button> -->
+  <!-- <button mat-raised-button color="primary" class="download-btn">Download Certificate</button>
     </div>
-    <div class="btn">
-      <!-- <button class="download-btn">Download Report Card</button> -->
-      <button mat-raised-button color="primary" class="download-btn">Download Certificate</button>
+  </div> -->
+  <!-- </div> -->
+
+
+  <!-- card in category -->
+  <div class="report_card">
+    <div class="category">
+      <!-- 1 -->
+      <mat-card class="example-card">
+        <mat-card-title>
+          <h1 class="rc_header">Non Technical Aspects</h1>
+        </mat-card-title>
+        <circle-progress [percent]="100" [radius]="100" [showSubtitle]="true" [outerStrokeWidth]="10"
+          [showTitle]="false" subtitleFontSize=100 [showUnits]="false" [subtitle]="'A+'" [showInnerStroke]='false'
+          [subtitleColor]="'white'" [outerStrokeColor]="'#78C000'" [animation]="true" [animationDuration]="500"
+          class="kl"></circle-progress>
+        <mat-card-content>
+          <table class="rc_table">
+            <tr>
+              <td>Communication</td>
+              <td>A</td>
+            </tr>
+            <tr>
+              <td>Initiative</td>
+              <td>A+</td>
+            </tr>
+            <tr>
+              <td>Project</td>
+              <td>A+</td>
+            </tr>
+          </table>
+        </mat-card-content>
+      </mat-card>
+      <!-- 2 -->
+      <mat-card class="example-card">
+        <mat-card-title>
+          <h1 class="rc_header">Non Technical Aspects</h1>
+        </mat-card-title>
+        <circle-progress [percent]="100" [radius]="100" [showSubtitle]="true" [outerStrokeWidth]="10"
+          [showTitle]="false" subtitleFontSize=100 [showUnits]="false" [subtitle]="'A+'" [showInnerStroke]='false'
+          [subtitleColor]="'white'" [outerStrokeColor]="'#78C000'" [animation]="true" [animationDuration]="500"
+          class="kl"></circle-progress>
+        <mat-card-content>
+          <table class="rc_table">
+            <tr>
+              <td>Communication</td>
+              <td>A</td>
+            </tr>
+            <tr>
+              <td>Initiative</td>
+              <td>A+</td>
+            </tr>
+            <tr>
+              <td>Project</td>
+              <td>A+</td>
+            </tr>
+          </table>
+        </mat-card-content>
+      </mat-card>
+      <!-- 3 -->
+      <mat-card class="example-card">
+        <mat-card-title>
+          <h1 class="rc_header">Non Technical Aspects</h1>
+        </mat-card-title>
+        <circle-progress [percent]="100" [radius]="100" [showSubtitle]="true" [outerStrokeWidth]="10"
+          [showTitle]="false" subtitleFontSize=100 [showUnits]="false" [subtitle]="'A+'" [showInnerStroke]='false'
+          [subtitleColor]="'white'" [outerStrokeColor]="'#78C000'" [animation]="true" [animationDuration]="500"
+          class="kl"></circle-progress>
+        <mat-card-content>
+          <table class="rc_table">
+            <tr>
+              <td>Communication</td>
+              <td>A</td>
+            </tr>
+            <tr>
+              <td>Initiative</td>
+              <td>A+</td>
+            </tr>
+            <tr>
+              <td>Project</td>
+              <td>A+</td>
+            </tr>
+          </table>
+        </mat-card-content>
+      </mat-card>
     </div>
   </div>
 </div>

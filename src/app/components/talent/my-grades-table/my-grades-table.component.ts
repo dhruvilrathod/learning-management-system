@@ -32,6 +32,7 @@ const NAMES: string[] = [
   styleUrls: ['./my-grades-table.component.css']
 })
 export class MyGradesTableComponent {
+
   displayedColumns: string[] = ['programID','programTitle','trainers','progressList','download'];
   dataSource: MatTableDataSource<UserData>;
 

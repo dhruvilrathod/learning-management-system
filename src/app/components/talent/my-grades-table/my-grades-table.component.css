@@ -1,51 +1,96 @@
-.grade_table {
-  display: flex;
-  flex-direction: column;
-  width: 80%;
-  margin: auto;
-  margin-bottom: 50px;
+html, body {
+    margin: 0;
 }
 
+.mdc-list-item:focus::before {
+    background-color: transparent !important;
+    opacity: 0 !important;
+}
+
+/* Styles for dashboard and its containers */
 .programs-table-container {
-  max-height: 70vh;
-  overflow: auto;
+    max-height: calc(100vh - 24vh - 80px - 64px);
+    overflow: auto;
 }
 
-/* optional */
 .programTitle-col {
-max-width: 30vw;
-min-width: 30vw;
+    max-width: 30vw;
+    min-width: 30vw;
+    cursor: pointer;
 }
 
 td {
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
 }
 
 tr:not(.row):hover {
-  background: whitesmoke;
+    background: whitesmoke;
 }
 
-/* .mat-mdc-form-field {
-  font-size: 14px;
-  width: 100%;
-} */
-
-.mdc-data-table__cell,
-.mdc-data-table__header-cell {
-  border-bottom-style: none;
-  border-spacing: 30px;
-  /* text-align: center; */
+.table-input {
+    width: 70px;
+    margin-bottom: -1.25em;
 }
 
-mat-paginator {
-  padding: 30px;
-} 
+.tab-heading {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    height: calc(8vh - 44px);
+    margin: 0 0 12px 0;
+    background-color: white;
+    border-radius: 20px;
+    border: 1px solid lightgray;
+}
+
+.tab-container {
+    padding: 20px;
+    overflow: auto;
+    height: calc(100vh - 8vh - 76px - 64px);
+    background-color: white;
+    border-radius: 20px;
+    border: 1px solid lightgray;
+}
+
+.tab-heading-text {
+    font-size: x-large;
+    text-align: center;
+    font-weight: 500;
+}
+
+.tab-heading-back-button {
+    margin-right: 20px;
+}
+
+.tab-container-flex {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.tab-container-button {
+    margin: 10px;
+}
+
+.tab-container-flex-grow {
+    flex-grow: 1;
+}
+
+.table-container {
+    overflow: auto;
+    padding: 10px;
+    border-radius: 20px;
+    border: 1px solid lightgray;
+}
+
+
 
 /* report card */
 .program {
   display: flex;
+  flex-direction: column;
   /* border:1px solid black; */
   width: 100%;
 }
@@ -70,7 +115,7 @@ mat-paginator {
   max-width: 500px;
   height: fit-content;
   background-color: #3f51b5;
-  border-radius: 25px;
+  border-radius: 25px; 
   /* margin-left: 100px; */
 }
 
@@ -103,7 +148,7 @@ mat-card-content {
 
 .report_card {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   /* border:1px solid black; */
   width: 50%;
   margin: auto;
@@ -113,8 +158,8 @@ mat-card-content {
 .category {
   /* border: 1px solid black; */
   display: flex;
-  flex-direction: column;
-  width: 100%;
+  flex-direction: row;
+  /* width: 100%; */
 }
 
 /* circle-progress & table */
@@ -206,4 +251,27 @@ hr {
     margin: 0;
     width: 100%;
   }
+}
+
+
+/* report card */
+.category .example-card{
+  display: flex;
+  flex-direction: column;
+  /* justify-content: space-evenly; */
+  margin:30px;
+  width: 1500px;
+  border: 1px solid green;
+}
+.kl{
+  /* border: 1px solid red; */
+  text-align: center;
+}
+.category mat-card-content{
+    width:300px;
+    margin: auto;
+}
+h1{
+  color : white;
+  /* text-align: center; */
 }
