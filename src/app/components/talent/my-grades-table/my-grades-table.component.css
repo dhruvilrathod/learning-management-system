@@ -1,277 +1,182 @@
 html, body {
-    margin: 0;
+  margin: 0;
 }
 
 .mdc-list-item:focus::before {
-    background-color: transparent !important;
-    opacity: 0 !important;
+  background-color: transparent !important;
+  opacity: 0 !important;
 }
 
 /* Styles for dashboard and its containers */
 .programs-table-container {
-    max-height: calc(100vh - 24vh - 80px - 64px);
-    overflow: auto;
+  max-height: calc(100vh - 24vh - 80px - 64px);
+  overflow: auto;
 }
 
 .programTitle-col {
-    max-width: 30vw;
-    min-width: 30vw;
-    cursor: pointer;
+  max-width: 30vw;
+  min-width: 30vw;
+  cursor: pointer;
 }
 
 td {
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
-tr:not(.row):hover {
-    background: whitesmoke;
+.table-container tr:not(.row):hover {
+  background: whitesmoke;
 }
 
 .table-input {
-    width: 70px;
-    margin-bottom: -1.25em;
+  width: 70px;
+  margin-bottom: -1.25em;
 }
 
 .tab-heading {
-    display: flex;
-    align-items: center;
-    padding: 20px;
-    height: calc(8vh - 44px);
-    margin: 0 0 12px 0;
-    background-color: white;
-    border-radius: 20px;
-    border: 1px solid lightgray;
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  height: calc(8vh - 44px);
+  margin: 0 0 12px 0;
+  background-color: white;
+  border-radius: 20px;
+  border: 1px solid lightgray;
 }
 
 .tab-container {
-    padding: 20px;
-    overflow: auto;
-    height: calc(100vh - 8vh - 76px - 64px);
-    background-color: white;
-    border-radius: 20px;
-    border: 1px solid lightgray;
+  padding: 20px;
+  overflow: auto;
+  height: calc(100vh - 8vh - 76px - 64px);
+  background-color: white;
+  border-radius: 20px;
+  border: 1px solid lightgray;
 }
 
 .tab-heading-text {
-    font-size: x-large;
-    text-align: center;
-    font-weight: 500;
+  font-size: x-large;
+  text-align: center;
+  font-weight: 500;
 }
 
 .tab-heading-back-button {
-    margin-right: 20px;
+  margin-right: 20px;
 }
 
 .tab-container-flex {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .tab-container-button {
-    margin: 10px;
+  margin: 10px;
 }
 
 .tab-container-flex-grow {
-    flex-grow: 1;
+  flex-grow: 1;
 }
 
 .table-container {
-    overflow: auto;
-    padding: 10px;
-    border-radius: 20px;
-    border: 1px solid lightgray;
+  overflow: auto;
+  padding: 10px;
+  border-radius: 20px;
+  border: 1px solid lightgray;
 }
 
 
-
-/* report card */
-.program {
-  display: flex;
-  flex-direction: column;
-  /* border:1px solid black; */
-  width: 100%;
-}
-
-.program_description {
-  /* border:1px solid black; */
-  width: 50%;
-  display: flex;
-  justify-content: center;
-  color: white;
-  margin: auto;
-}
-
-.img img {
-  padding: 30px;
-  width: 500px;
-  height: 300px;
-  border-radius: 50px;
-}
-
-.example-card {
-  max-width: 500px;
-  height: fit-content;
-  background-color: #3f51b5;
-  border-radius: 25px; 
-  /* margin-left: 100px; */
-}
-
-mat-card-header {
-  padding: 0px;
-  text-align: center;
-}
-
-mat-card-subtitle p {
-  margin: 20px 45px 10px;
-}
-
-mat-card-subtitle {
-  /* border: 1px solid black; */
-  margin-left: 15px;
-  display: flex;
-  text-align: left;
-  color: white;
-}
-
-mat-card-content {
-  background-color: white;
-  border-radius: 25px;
-  text-align: justify;
-  padding: 15px;
-  margin: 0px 30px;
-  margin-bottom: 20px;
-  color: #3f51b5;
-}
-
+/* report card CSS*/
 .report_card {
-  display: flex;
-  flex-direction: row;
-  /* border:1px solid black; */
-  width: 50%;
-  margin: auto;
-  margin-left: -130px;
+display: flex;
+flex-direction: column;
+/* border:1px solid black; */
+width: 100%;
+/* margin: auto; */
+/* margin-left: -130px; */
 }
 
 .category {
-  /* border: 1px solid black; */
-  display: flex;
-  flex-direction: row;
-  /* width: 100%; */
+/* border: 1px solid black; */
+display: flex;
+/* flex-direction: row; */
+flex-wrap: wrap;
+width: 100%;
+/* position: absolute; */
 }
 
 /* circle-progress & table */
 .cp_t {
-  width: 70%;
-  display: flex;
-  flex-direction: row;
-  margin: auto;
+width: 70%;
+display: flex;
+flex-direction: row;
+/* margin: auto;    */
 }
 
 /* report-card header */
 .rc_header {
-  text-align: center;
-  padding: 20px;
+padding: 10px;
+margin-bottom: -10px;
 }
 
 .rc_table {
-  border-spacing: 10px;
-  /* border:1px solid black; */
-  width: 250px;
-  margin: auto;
+border-spacing: 25px;
+/* border:1px solid black; */
+width: 380px;
+font-size: 20px;
+margin: auto;
 }
 
-hr {
-  margin: 30px auto;
-  width: 550px;
+/* report card */
+h1{
+color : white;
+}
+
+.card{
+position: relative;
+width: 400px;
+height: fit-content;
+background-color: white;
+margin-left : auto;
+margin-right: auto;
+border-radius: 20px;
+overflow: hidden;
+box-shadow: 0 15px 25px gray;
+transition : 0.5s;
+margin-bottom: 50px;
+}
+
+.circle{
+padding: 15px;
+height: auto;
+clip-path: circle(250px at center 0);
+text-align: center;
+border-radius: 20px;
+background-color: #3f51b5;
+}
+
+.content{
+border: 1px solid red;
+width: 400px;
+height: fit-content;
+margin: auto;
 }
 
 .btn {
-  /* border: 1px solid black; */
-  display: flex;
-  flex-direction: row;
-  margin-top: 40px;
+/* border: 1px solid black; */
+display: flex;
+flex-direction: row;
+margin-top: 40px;
 }
 
 .download-btn {
-  display: block;
-  margin: auto;
+display: block;
+margin: auto;
 }
 
 .download-btn:hover {
-  border: 1px solid;
-  border-color: #3f51b5;
-  /* background-color: rgb(50, 10, 123); */
-  color: white;
-  transform: scale(1.1,1.1);
-}
-
-/* table media query */
-@media(min-width:330px) and (max-width:676px) {
-  .grade_table {
-    max-width: min-content;
-    margin: auto;
-    background-color: aqua;
-    /* width:fit-content; */
-  }
-
-  mat-table {
-    /* max-width:800px; */
-    /* min-width: 600px; */
-    max-width: fit-content;
-    margin: auto;
-  }
-}
-
-/* report-card media query */
-@media(max-width:1760px) {
-  .program {
-    flex-direction: column;
-    /* width: 90%; */
-    margin: auto;
-  }
-
-  .program_description,
-  .report_card {
-    width: 90%;
-    margin: auto;
-  }
-}
-
-@media (max-width:1017px) {
-  .cp_t {
-    flex-direction: column;
-    width: max-content;
-    /* margin: 0; */
-  }
-
-  .report_card {
-    margin: 0;
-    width: 100%;
-  }
-}
-
-
-/* report card */
-.category .example-card{
-  display: flex;
-  flex-direction: column;
-  /* justify-content: space-evenly; */
-  margin:30px;
-  width: 1500px;
-  border: 1px solid green;
-}
-.kl{
-  /* border: 1px solid red; */
-  text-align: center;
-}
-.category mat-card-content{
-    width:300px;
-    margin: auto;
-}
-h1{
-  color : white;
-  /* text-align: center; */
+border: 1px solid;
+border-color: #3f51b5;
+color: white;
+transform: scale(1.1,1.1);
 }

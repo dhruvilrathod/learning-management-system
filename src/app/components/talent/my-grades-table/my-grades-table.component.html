@@ -1,3 +1,4 @@
+<!-- Main heading -->
 <div class="tab-heading">
   <div class="tab-heading-text">
     My Grades
@@ -5,7 +6,7 @@
 </div>
 
 <div class="tab-container">
-
+  <!-- Filter -->
   <div class="tab-container-flex">
     <div class="tab-container-flex-grow">
       <mat-form-field appearance="outline">
@@ -14,7 +15,7 @@
       </mat-form-field>
     </div>
   </div>
-
+  <!-- table contain -->
   <div class="table-container">
     <div class="programs-table-container">
       <table mat-table [dataSource]="dataSource" matSort>
@@ -38,7 +39,7 @@
           <td mat-cell *matCellDef="let row" class="skills-col"> {{row.progressList}}% </td>
           <!-- Download -->
         </ng-container><ng-container matColumnDef="download">
-          <th mat-header-cell *matHeaderCellDef mat-sort-header> Download </th>
+          <th mat-header-cell *matHeaderCellDef> Download </th>
           <td mat-cell *matCellDef="let row" class="download-button-col"> <button mat-raised-button
               class="download-button" color="primary">Download</button> </td>
         </ng-container>
@@ -54,189 +55,159 @@
   <mat-paginator class="paginator" [pageSizeOptions]="[10, 25, 100]" aria-label="Select page of users"></mat-paginator>
 </div>
 
-
-<div class="program">
-  <!-- Program Description -->
-  <div class="program_description">
-    <mat-card class="example-card">
-      <div class="img">
-        <img mat-card-image src="https://www.aihr.com/wp-content/uploads/Learning-and-development.png"
-          alt="Photo of a Shiba Inu">
-      </div>
-      <mat-card-header>
-        <mat-card-title>UI Program</mat-card-title>
-        <mat-card-subtitle>
-          <p>Pradip Vadasak<br />Total Enrolled : 1220</p>
-          <p>Start Date : 23-07-2022<br />End Date : 12-02-2023</p>
-        </mat-card-subtitle>
-      </mat-card-header>
-      <mat-card-content>
-        <p>
-          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eum architecto consequatur earum magnam quisquam
-          doloribus, repellat quas perspiciatis atque similique inventore voluptatum consectetur at.
-          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ab minus eius nostrum praesentium qui voluptatem,
-          error debitis corporis deserunt repellendus?
-        </p>
-      </mat-card-content>
-      <!-- <mat-card-actions>
-        <button mat-button>LIKE</button>
-        <button mat-button>SHARE</button>
-      </mat-card-actions> -->
-    </mat-card>
+<!-- Main Heading -->
+<div class="tab-heading">
+  <div class="tab-heading-text">
+    Program Grades
   </div>
-  <!-- Report card -->
-  <!-- <div class="report_card"> -->
-  <!-- <div class="category"> -->
-  <!-- Technical scenario -->
-  <!-- <div class="tech">
-        <h1 class="rc_header">Technical Aspects</h1>
-        <div class="cp_t">
-          <circle-progress [percent]="75" [radius]="100" [showSubtitle]="true" [outerStrokeWidth]="10"
-            [showTitle]="false" subtitleFontSize=100 [showUnits]="false" [subtitle]="'A'" [showInnerStroke]='false'
-            [outerStrokeColor]="'#78C000'" [animation]="true" [animationDuration]="500">
-          </circle-progress>
-          <table class="rc_table">
-            <tr>
-              <td>Core</td>
-              <td>A</td>
-            </tr>
-            <tr>
-              <td>Advanced</td>
-              <td>A+</td>
-            </tr>
-            <tr>
-              <td>Project</td>
-              <td>A+</td>
-            </tr>
-            <tr>
-              <td>Core</td>
-              <td>A</td>
-            </tr>
-            <tr>
-              <td>Core</td>
-              <td>A</td>
-            </tr>
-            <tr>
-              <td>Core</td>
-              <td>A</td>
-            </tr>
-          </table>
-        </div>
-      </div>
-      <hr> -->
-  <!-- Non-Techanical scenario -->
-  <!-- <div class="non-tech">
-        <h1 class="rc_header">Non Technical Aspects</h1>
-        <div class="cp_t">
-          <circle-progress [percent]="100" [radius]="100" [showSubtitle]="true" [outerStrokeWidth]="10"
-            [showTitle]="false" subtitleFontSize=100 [showUnits]="false" [subtitle]="'A+'" [showInnerStroke]='false'
-            [outerStrokeColor]="'#78C000'" [animation]="true" [animationDuration]="500"></circle-progress>
-          <table class="rc_table">
-            <tr>
-              <td>Communication</td>
-              <td>A</td>
-            </tr>
-            <tr>
-              <td>Initiative</td>
-              <td>A+</td>
-            </tr>
-            <tr>
-              <td>Project</td>
-              <td>A+</td>
-            </tr>
-          </table>
-        </div>
-      </div>
-    </div> -->
-  <!-- <div class="btn"> -->
-  <!-- <button class="download-btn">Download Report Card</button> -->
-  <!-- <button mat-raised-button color="primary" class="download-btn">Download Certificate</button>
-    </div>
-  </div> -->
-  <!-- </div> -->
+</div>
 
+<div class="tab-container">
 
   <!-- card in category -->
   <div class="report_card">
     <div class="category">
-      <!-- 1 -->
-      <mat-card class="example-card">
-        <mat-card-title>
+        <!-- 1 -->
+      <div class="card">
+        <div class="circle">
           <h1 class="rc_header">Non Technical Aspects</h1>
-        </mat-card-title>
-        <circle-progress [percent]="100" [radius]="100" [showSubtitle]="true" [outerStrokeWidth]="10"
-          [showTitle]="false" subtitleFontSize=100 [showUnits]="false" [subtitle]="'A+'" [showInnerStroke]='false'
-          [subtitleColor]="'white'" [outerStrokeColor]="'#78C000'" [animation]="true" [animationDuration]="500"
-          class="kl"></circle-progress>
-        <mat-card-content>
-          <table class="rc_table">
-            <tr>
-              <td>Communication</td>
-              <td>A</td>
-            </tr>
-            <tr>
-              <td>Initiative</td>
-              <td>A+</td>
-            </tr>
-            <tr>
-              <td>Project</td>
-              <td>A+</td>
-            </tr>
-          </table>
-        </mat-card-content>
-      </mat-card>
-      <!-- 2 -->
-      <mat-card class="example-card">
-        <mat-card-title>
+          <circle-progress [percent]="100" [radius]="75" [showSubtitle]="true" [outerStrokeWidth]="10"
+            [showTitle]="false" subtitleFontSize=75 [showUnits]="false" [subtitle]="'A+'" [showInnerStroke]='false'
+            [subtitleColor]="'white'" [outerStrokeColor]="'#78C000'" [animation]="true" [animationDuration]="500"></circle-progress>
+        </div>
+        <div>
+          <table class="content" class="rc_table">
+              <tr>
+                <td>Communication</td>
+                <td>A</td>
+              </tr>
+              <tr>
+                <td>Initiative</td>
+                <td>A+</td>
+              </tr>
+              <tr>
+                <td>Project</td>
+                <td>A+</td>
+              </tr>
+            </table>
+        </div>
+      </div>
+        <!-- 2 -->
+      <div class="card">
+        <div class="circle">
           <h1 class="rc_header">Non Technical Aspects</h1>
-        </mat-card-title>
-        <circle-progress [percent]="100" [radius]="100" [showSubtitle]="true" [outerStrokeWidth]="10"
-          [showTitle]="false" subtitleFontSize=100 [showUnits]="false" [subtitle]="'A+'" [showInnerStroke]='false'
-          [subtitleColor]="'white'" [outerStrokeColor]="'#78C000'" [animation]="true" [animationDuration]="500"
-          class="kl"></circle-progress>
-        <mat-card-content>
-          <table class="rc_table">
-            <tr>
-              <td>Communication</td>
-              <td>A</td>
-            </tr>
-            <tr>
-              <td>Initiative</td>
-              <td>A+</td>
-            </tr>
-            <tr>
-              <td>Project</td>
-              <td>A+</td>
-            </tr>
-          </table>
-        </mat-card-content>
-      </mat-card>
+          <circle-progress [percent]="100" [radius]="75" [showSubtitle]="true" [outerStrokeWidth]="10"
+            [showTitle]="false" subtitleFontSize=75 [showUnits]="false" [subtitle]="'A+'" [showInnerStroke]='false'
+            [subtitleColor]="'white'" [outerStrokeColor]="'#78C000'" [animation]="true" [animationDuration]="500"
+            class="kl"></circle-progress>
+        </div>
+        <div>
+          <table class="content" class="rc_table">
+              <tr>
+                <td>Communication</td>
+                <td>A</td>
+              </tr>
+              <tr>
+                <td>Initiative</td>
+                <td>A+</td>
+              </tr>
+              <tr>
+                <td>Project</td>
+                <td>A+</td>
+              </tr>
+            </table>
+        </div>
+      </div>
       <!-- 3 -->
-      <mat-card class="example-card">
-        <mat-card-title>
+      <div class="card">
+        <div class="circle">
           <h1 class="rc_header">Non Technical Aspects</h1>
-        </mat-card-title>
-        <circle-progress [percent]="100" [radius]="100" [showSubtitle]="true" [outerStrokeWidth]="10"
-          [showTitle]="false" subtitleFontSize=100 [showUnits]="false" [subtitle]="'A+'" [showInnerStroke]='false'
-          [subtitleColor]="'white'" [outerStrokeColor]="'#78C000'" [animation]="true" [animationDuration]="500"
-          class="kl"></circle-progress>
-        <mat-card-content>
-          <table class="rc_table">
-            <tr>
-              <td>Communication</td>
-              <td>A</td>
-            </tr>
-            <tr>
-              <td>Initiative</td>
-              <td>A+</td>
-            </tr>
-            <tr>
-              <td>Project</td>
-              <td>A+</td>
-            </tr>
-          </table>
-        </mat-card-content>
-      </mat-card>
+          <circle-progress [percent]="100" [radius]="75" [showSubtitle]="true" [outerStrokeWidth]="10"
+            [showTitle]="false" subtitleFontSize=75 [showUnits]="false" [subtitle]="'A+'" [showInnerStroke]='false'
+            [subtitleColor]="'white'" [outerStrokeColor]="'#78C000'" [animation]="true" [animationDuration]="500"></circle-progress>
+        </div>
+        <div>
+          <table class="content" class="rc_table">
+              <tr>
+                <td>Communication</td>
+                <td>A</td>
+              </tr>
+              <tr>
+                <td>Initiative</td>
+                <td>A+</td>
+              </tr>
+              <tr>
+                <td>Project</td>
+                <td>A+</td>
+              </tr>
+              <tr>
+                <td>Communication</td>
+                <td>A</td>
+                <tr>
+                  <td>Communication</td>
+                  <td>A</td>
+                  <tr>
+                    <td>Communication</td>
+                    <td>A</td>
+            </table>
+        </div>
+      </div>
+      <!-- 4 -->
+      <div class="card">
+        <div class="circle">
+          <h1 class="rc_header">Non Technical Aspects</h1>
+          <circle-progress [percent]="100" [radius]="75" [showSubtitle]="true" [outerStrokeWidth]="10"
+            [showTitle]="false" subtitleFontSize=75 [showUnits]="false" [subtitle]="'A+'" [showInnerStroke]='false'
+            [subtitleColor]="'white'" [outerStrokeColor]="'#78C000'" [animation]="true" [animationDuration]="500"
+            class="kl"></circle-progress>
+        </div>
+        <div>
+          <table class="content" class="rc_table">
+              <tr>
+                <td>Communication</td>
+                <td>A</td>
+              </tr>
+              <tr>
+                <td>Initiative</td>
+                <td>A+</td>
+              </tr>
+              <tr>
+                <td>Project</td>
+                <td>A+</td>
+              </tr>
+            </table>
+        </div>
+      </div>
+      <!-- 5 -->
+      <div class="card">
+        <div class="circle">
+          <h1 class="rc_header">Non Technical Aspects</h1>
+          <circle-progress [percent]="100" [radius]="75" [showSubtitle]="true" [outerStrokeWidth]="10"
+            [showTitle]="false" subtitleFontSize=75 [showUnits]="false" [subtitle]="'A+'" [showInnerStroke]='false'
+            [subtitleColor]="'white'" [outerStrokeColor]="'#78C000'" [animation]="true" [animationDuration]="500"></circle-progress>
+        </div>
+        <div>
+          <table class="content" class="rc_table">
+              <tr>
+                <td>Communication</td>
+                <td>A</td>
+              </tr>
+              <tr>
+                <td>Initiative</td>
+                <td>A+</td>
+              </tr>
+              <tr>
+                <td>Project</td>
+                <td>A+</td>
+              </tr>
+            </table>
+        </div>
+      </div>
+    </div>
+    <div class="btn">
+      <button mat-raised-button color="primary" class="download-btn">Download Certificate</button>
     </div>
   </div>
-</div>
+
+  
+    
