@@ -2,11 +2,10 @@ import { Component, OnInit, ViewChild } from '@angular/core';
 import { MatDrawer, MatSidenav } from '@angular/material/sidenav';
 import { NavigationEnd, Router } from '@angular/router';
 import { SidenavService } from 'src/app/services/sidenav.service';
-
 @Component({
   selector: 'app-side-nav-bar',
   templateUrl: './side-nav-bar.component.html',
-  styleUrls: ['./side-nav-bar.component.css']
+  styleUrls: ['./side-nav-bar.component.css'],
 })
 
 // ######################## Do not precoded things #######################

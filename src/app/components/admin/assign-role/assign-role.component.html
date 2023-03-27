@@ -58,15 +58,14 @@
           class="selectionList"
           *ngFor="let privilage of privilages"
           [value]="privilage.privilage"
-          (click)="toggleSelection(privilage)"
         >
           {{ privilage.privilage }}
         </mat-list-option>
       </mat-selection-list>
 
-      <mat-checkbox [(ngModel)]="selectAll" (click)="toggleSelectAll()"
+      <!-- <mat-checkbox [(ngModel)]="selectAll" (click)="toggleSelectAll()"
         >{{ selectAll ? "Deselect All" : "Select All" }}></mat-checkbox
-      >
+      > -->
 
       <div class="showSelected">
         <p>
