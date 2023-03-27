@@ -1,0 +1,29 @@
+.card {
+  background-color: white;
+  border-radius: 0.75rem;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.4);
+}
+
+.card-img {
+  padding: 1rem;
+  margin-bottom: 0.5rem;
+  overflow: hidden;
+}
+
+.card-img img {
+  display: block;
+  width: 100%;
+  max-height: 200px;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 10px;
+}
+
+.card-content {
+  /* background: linear-gradient(to bottom left, #ef8d9c 40%, #ffc39e 100%); */
+  padding: 0.25rem 1rem;
+}
