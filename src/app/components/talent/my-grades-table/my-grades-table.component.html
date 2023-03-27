@@ -21,27 +21,29 @@
       <table mat-table [dataSource]="dataSource" matSort>
         <!-- Title column -->
         <ng-container matColumnDef="programTitle">
-          <th mat-header-cell *matHeaderCellDef mat-sort-header> Name </th>
-          <td mat-cell *matCellDef="let row" class="programTitle-col"> {{row.programTitle}} </td>
+          <th mat-header-cell *matHeaderCellDef mat-sort-header>Program Name </th>
+          <td mat-cell *matCellDef="let row" class="programTitle-col"> {{row.title}} </td>
         </ng-container>
         <!-- ID column -->
         <ng-container matColumnDef="programID" sticky>
           <th mat-header-cell *matHeaderCellDef mat-sort-header> ID </th>
-          <td mat-cell *matCellDef="let row" class="programID-col"> {{row.programID}} </td>
+          <td mat-cell *matCellDef="let row" class="programID-col"> {{row.id}} </td>
         </ng-container>
         <!-- Trainer name -->
-        <ng-container matColumnDef="trainers">
-          <th mat-header-cell *matHeaderCellDef mat-sort-header> Trainers </th>
-          <td mat-cell *matCellDef="let row" class="trainers-col"> {{row.trainers}} </td>
+        <ng-container matColumnDef="skills">
+          <th mat-header-cell *matHeaderCellDef mat-sort-header> Skills </th>
+          <td mat-cell *matCellDef="let row" class="trainers-col"> {{row.completed}} </td>
           <!-- Progress -->
-        </ng-container> <ng-container matColumnDef="progressList">
-          <th mat-header-cell *matHeaderCellDef mat-sort-header> Progress </th>
-          <td mat-cell *matCellDef="let row" class="skills-col"> {{row.progressList}}% </td>
-          <!-- Download -->
-        </ng-container><ng-container matColumnDef="download">
+        </ng-container> <ng-container matColumnDef="overallgrades">
+          <th mat-header-cell *matHeaderCellDef mat-sort-header> Overall Grades </th>
+          <td mat-cell *matCellDef="let row" class="skills-col"> {{row.userId}} </td>
+        </ng-container>
+        <!-- Download -->
+        <ng-container matColumnDef="download">
           <th mat-header-cell *matHeaderCellDef> Download </th>
-          <td mat-cell *matCellDef="let row" class="download-button-col"> <button mat-raised-button
-              class="download-button" color="primary">Download</button> </td>
+          <td mat-cell *matCellDef="let row" class="download-button-col">
+            <button mat-raised-button class="download-button" color="primary" [routerLink]="['/my-grades',row.id]">Download</button>
+          </td>
         </ng-container>
         <tr mat-header-row *matHeaderRowDef="displayedColumns; sticky: true"></tr>
         <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
@@ -54,160 +56,3 @@
   </div>
   <mat-paginator class="paginator" [pageSizeOptions]="[10, 25, 100]" aria-label="Select page of users"></mat-paginator>
 </div>
-
-<!-- Main Heading -->
-<div class="tab-heading">
-  <div class="tab-heading-text">
-    Program Grades
-  </div>
-</div>
-
-<div class="tab-container">
-
-  <!-- card in category -->
-  <div class="report_card">
-    <div class="category">
-        <!-- 1 -->
-      <div class="card">
-        <div class="circle">
-          <h1 class="rc_header">Non Technical Aspects</h1>
-          <circle-progress [percent]="100" [radius]="75" [showSubtitle]="true" [outerStrokeWidth]="10"
-            [showTitle]="false" subtitleFontSize=75 [showUnits]="false" [subtitle]="'A+'" [showInnerStroke]='false'
-            [subtitleColor]="'white'" [outerStrokeColor]="'#78C000'" [animation]="true" [animationDuration]="500"></circle-progress>
-        </div>
-        <div>
-          <table class="content" class="rc_table">
-              <tr>
-                <td>Communication</td>
-                <td>A</td>
-              </tr>
-              <tr>
-                <td>Initiative</td>
-                <td>A+</td>
-              </tr>
-              <tr>
-                <td>Project</td>
-                <td>A+</td>
-              </tr>
-            </table>
-        </div>
-      </div>
-        <!-- 2 -->
-      <div class="card">
-        <div class="circle">
-          <h1 class="rc_header">Non Technical Aspects</h1>
-          <circle-progress [percent]="100" [radius]="75" [showSubtitle]="true" [outerStrokeWidth]="10"
-            [showTitle]="false" subtitleFontSize=75 [showUnits]="false" [subtitle]="'A+'" [showInnerStroke]='false'
-            [subtitleColor]="'white'" [outerStrokeColor]="'#78C000'" [animation]="true" [animationDuration]="500"
-            class="kl"></circle-progress>
-        </div>
-        <div>
-          <table class="content" class="rc_table">
-              <tr>
-                <td>Communication</td>
-                <td>A</td>
-              </tr>
-              <tr>
-                <td>Initiative</td>
-                <td>A+</td>
-              </tr>
-              <tr>
-                <td>Project</td>
-                <td>A+</td>
-              </tr>
-            </table>
-        </div>
-      </div>
-      <!-- 3 -->
-      <div class="card">
-        <div class="circle">
-          <h1 class="rc_header">Non Technical Aspects</h1>
-          <circle-progress [percent]="100" [radius]="75" [showSubtitle]="true" [outerStrokeWidth]="10"
-            [showTitle]="false" subtitleFontSize=75 [showUnits]="false" [subtitle]="'A+'" [showInnerStroke]='false'
-            [subtitleColor]="'white'" [outerStrokeColor]="'#78C000'" [animation]="true" [animationDuration]="500"></circle-progress>
-        </div>
-        <div>
-          <table class="content" class="rc_table">
-              <tr>
-                <td>Communication</td>
-                <td>A</td>
-              </tr>
-              <tr>
-                <td>Initiative</td>
-                <td>A+</td>
-              </tr>
-              <tr>
-                <td>Project</td>
-                <td>A+</td>
-              </tr>
-              <tr>
-                <td>Communication</td>
-                <td>A</td>
-                <tr>
-                  <td>Communication</td>
-                  <td>A</td>
-                  <tr>
-                    <td>Communication</td>
-                    <td>A</td>
-            </table>
-        </div>
-      </div>
-      <!-- 4 -->
-      <div class="card">
-        <div class="circle">
-          <h1 class="rc_header">Non Technical Aspects</h1>
-          <circle-progress [percent]="100" [radius]="75" [showSubtitle]="true" [outerStrokeWidth]="10"
-            [showTitle]="false" subtitleFontSize=75 [showUnits]="false" [subtitle]="'A+'" [showInnerStroke]='false'
-            [subtitleColor]="'white'" [outerStrokeColor]="'#78C000'" [animation]="true" [animationDuration]="500"
-            class="kl"></circle-progress>
-        </div>
-        <div>
-          <table class="content" class="rc_table">
-              <tr>
-                <td>Communication</td>
-                <td>A</td>
-              </tr>
-              <tr>
-                <td>Initiative</td>
-                <td>A+</td>
-              </tr>
-              <tr>
-                <td>Project</td>
-                <td>A+</td>
-              </tr>
-            </table>
-        </div>
-      </div>
-      <!-- 5 -->
-      <div class="card">
-        <div class="circle">
-          <h1 class="rc_header">Non Technical Aspects</h1>
-          <circle-progress [percent]="100" [radius]="75" [showSubtitle]="true" [outerStrokeWidth]="10"
-            [showTitle]="false" subtitleFontSize=75 [showUnits]="false" [subtitle]="'A+'" [showInnerStroke]='false'
-            [subtitleColor]="'white'" [outerStrokeColor]="'#78C000'" [animation]="true" [animationDuration]="500"></circle-progress>
-        </div>
-        <div>
-          <table class="content" class="rc_table">
-              <tr>
-                <td>Communication</td>
-                <td>A</td>
-              </tr>
-              <tr>
-                <td>Initiative</td>
-                <td>A+</td>
-              </tr>
-              <tr>
-                <td>Project</td>
-                <td>A+</td>
-              </tr>
-            </table>
-        </div>
-      </div>
-    </div>
-    <div class="btn">
-      <button mat-raised-button color="primary" class="download-btn">Download Certificate</button>
-    </div>
-  </div>
-
-  
-    

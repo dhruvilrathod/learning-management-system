@@ -38,7 +38,7 @@ export class EvaluationTableComponent implements OnInit {
     }
   }
 
-  evaluateFor(programID: string): void {
-    console.log(programID);
-  }
+  // evaluateFor(programID: string): void {
+  //   console.log(programID);
+  // }
 }
