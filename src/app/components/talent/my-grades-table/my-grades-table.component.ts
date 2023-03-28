@@ -18,6 +18,7 @@ export interface UserData {
   styleUrls: ['./my-grades-table.component.css']
 })
 export class MyGradesTableComponent {
+  loading:boolean = true;
 
   displayedColumns: string[] = ['programID','programTitle','skills','overallgrades','download'];
   dataSource! : MatTableDataSource<any>;
@@ -32,7 +33,8 @@ export class MyGradesTableComponent {
     this._http.get('https://jsonplaceholder.typicode.com/todos').subscribe((data: any) => {
       this.dataSource = new MatTableDataSource(data);
       this.dataSource.paginator = this.paginator;
-      this.dataSource.sort = this.sort;  
+      this.dataSource.sort = this.sort;
+      this.loading = false;  
     })
   }
 
