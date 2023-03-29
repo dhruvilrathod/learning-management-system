@@ -1,67 +1,96 @@
-export interface Talent {
-    personalDetails: {
-        talentName: string,
-        talentID: string,
-        talentGender: string,
-        countryOfResidence: string,
-        birthDate: string,    
-    }
-    professionalDetails: {
-        currentWorkingStatus: string,
-        currentProfessionalStatus: string;
-        typeOfIndustries: string [],
-        yearsOfExperience: string,
-        skills: any[],
-        currentEmployer: string,
-        linkedInProfileURL: string,
-        recordedVideoURL: string,    
-    }
-    educationDetails: {
-        nameOfDegree: string,
-        nameOfUniversity: string,
-        yearOfPassing: number
-    }[],
-    knownLanguages: string[],
+export interface TalentPersonalDetails {
+    name: string,
+    id?: string,
+    gender: string,
+    countryName: string,
+    age: number
+}
+
+export interface TalentProfessionalDetails {
+    currentProfessionalStatus: string;
+    industryType: string,
+    yearOfExperience: string,
+    skills: any[],
+    currentEmployerName: string,
+    linkedInProfileLink: string,
+    recordedVideoLink: string,
     experienceInIT: string,
-    experienceLevel: number,
-    expectedSpecializations: string[],
-    expectedSkill: string,
-    profilePictureURL: string,
-    username: string,
+    experienceLevel: number
+}
+
+export interface TalentEducationalDetails {
+    nameOfDegree: string,
+    nameOfUniversity: string,
+    yearOfPassing: number
+}
+
+export interface TalentOtherDetails {
+    knownLanguages: string[],
+    fieldSpecialization: string[],
+    skillSpecialization: string,
+    profileImage: string
+}
+
+export interface TalentCredentialInterface {
+    email: string,
+    password?: string    
+}
+
+export interface Talent {
+    personalDetails: TalentPersonalDetails
+    professionalDetails: TalentProfessionalDetails
+    educationDetails: TalentEducationalDetails[],
+    otherDetails?: TalentOtherDetails,
+    credentials?: TalentCredentialInterface,
+    enrolledPrograms: Program[]
 }
 
 export interface Trainer {
-    trainerName: string;
-    trainerID: string;
-    assignedProgramNames: string[],
-    yearsOfExperience: number,
-    emailOfTrainer: string,
-    profilePicURL: string
+    name: string;
+    id: string;
+    programs: any[],
+    yearOfExperience: string,
+    email: string,
+    profileImage: string
 }
 
-export interface Grades {
-    overallGrades: string,
-    gradeDetails: {
-        mainSkillName: string,
-        subSkills: {
-            subskillName:string,
-            subSkillScore: string 
-        }[]
+export interface Skills {
+    mainSkillName: string,
+    mainSkillID: string,
+    subSkills: {
+        subSkillID: string,
+        subSkillName: string,
+        subSkillScore?: string
     }[]
 }
 
+export interface Grades {
+    talentName: string,
+    programName: string,
+    talentID?: string,
+    programID?: string,
+    overallGrades: string,
+    gradeDetails: Skills[]
+}
+
 export interface Program {
-    programTitle: string,
-    programID: string,
+    id: string,
+    name: string,
     trainers: string[],
     thumbnailImageURL: string,
-    skillsList: string[],
-    startDate?: string,
-    endDate?: string,
+    skillsList: Skills[],
+    programTracking: {
+        isPublished: boolean,
+        isStarted: boolean,
+        startDate?: string,
+        endDate?: string
+    }
     duration?: string,
-    programImageURL?: string,
-    programDescription?: string,
+    image?: string,
+    programOverview?: string,
     totalEnrolledStudent?: number,
-    programOutcomes?: any[],
-    overallGrades: string
+    programOutcomes?: string,
+    overallGrades: string,
+    isEnrolled?: boolean,
+    grades?: Grades
 }

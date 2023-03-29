@@ -51,6 +51,8 @@ import { MatListModule } from '@angular/material/list';
 import { ApprovalAcknowledgementComponent } from './components/public/approval-acknowledgement/approval-acknowledgement.component';
 import { ResetPasswordComponent } from './components/public/reset-password/reset-password.component';
 import { ProgramPublicationComponent } from './components/trainer/program-publication/program-publication.component';
+import { ProgramWiseTalentsComponent } from './components/reusable/program-wise-talents/program-wise-talents.component';
+import { RoleManagementComponent } from './components/admin/role-management/role-management.component';
 
 
 
@@ -94,7 +96,9 @@ import { ProgramPublicationComponent } from './components/trainer/program-public
     ProfileComponent,
     ApprovalAcknowledgementComponent,
     ResetPasswordComponent,
-    ProgramPublicationComponent
+    ProgramPublicationComponent,
+    ProgramWiseTalentsComponent,
+    RoleManagementComponent
   ],
 
 
