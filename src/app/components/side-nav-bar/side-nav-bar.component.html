@@ -1,7 +1,7 @@
 <mat-drawer-container>
     <mat-drawer class="sidenav-container" [mode]="smallScreen ? 'over' : 'side'" #sideNavDrawer [opened]="sideNavOpened">
         <mat-nav-list role="navigation">
-            <a *ngFor="let link of links" mat-list-item [routerLink]="link.route" routerLinkActive="sidenav-item-selected" [activated]="link.isActive" aria-disabled="false">{{link.name}}</a>
+            <a *ngFor="let link of links" mat-list-item [routerLink]="link.route" routerLinkActive="sidenav-item-selected" aria-disabled="false">{{link.name}}</a>
         </mat-nav-list>
     </mat-drawer>
     <mat-drawer-content class="drawer-content">

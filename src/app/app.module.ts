@@ -4,6 +4,8 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { HttpClientModule } from '@angular/common/http';
+import { ReactiveFormsModule } from '@angular/forms';
 
 // component listing
 import { HeaderNavBarComponent } from './components/header-nav-bar/header-nav-bar.component';
@@ -39,6 +41,9 @@ import { AssignRoleComponent } from './components/admin/assign-role/assign-role.
 import { FooterComponent } from './components/reusable/footer/footer.component';
 import { ErrorPageComponent } from './components/error-page/error-page.component';
 import { ProfileComponent } from './components/reusable/profile/profile.component';
+import { ApprovalAcknowledgementComponent } from './components/public/approval-acknowledgement/approval-acknowledgement.component';
+import { ResetPasswordComponent } from './components/public/reset-password/reset-password.component';
+import { ProgramPublicationComponent } from './components/trainer/program-publication/program-publication.component';
 
 
 // Angular Materials Imports should be written here
@@ -48,11 +53,12 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatListModule } from '@angular/material/list';
-import { ApprovalAcknowledgementComponent } from './components/public/approval-acknowledgement/approval-acknowledgement.component';
-import { ResetPasswordComponent } from './components/public/reset-password/reset-password.component';
-import { ProgramPublicationComponent } from './components/trainer/program-publication/program-publication.component';
-import { ProgramWiseTalentsComponent } from './components/reusable/program-wise-talents/program-wise-talents.component';
-import { RoleManagementComponent } from './components/admin/role-management/role-management.component';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatPaginatorModule } from '@angular/material/paginator';
+import { MatTableModule } from '@angular/material/table';
+import { MatSortModule } from '@angular/material/sort';
+import { MatInputModule } from '@angular/material/input';
+import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
 
 
 
@@ -96,9 +102,7 @@ import { RoleManagementComponent } from './components/admin/role-management/role
     ProfileComponent,
     ApprovalAcknowledgementComponent,
     ResetPasswordComponent,
-    ProgramPublicationComponent,
-    ProgramWiseTalentsComponent,
-    RoleManagementComponent
+    ProgramPublicationComponent
   ],
 
 
@@ -107,12 +111,20 @@ import { RoleManagementComponent } from './components/admin/role-management/role
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
+    HttpClientModule,
+    ReactiveFormsModule,
     MatToolbarModule,
     MatCommonModule,
     MatIconModule,
     MatButtonModule,
     MatSidenavModule,
-    MatListModule
+    MatListModule,
+    MatFormFieldModule,
+    MatPaginatorModule,
+    MatTableModule,
+    MatSortModule,
+    MatInputModule,
+    MatProgressSpinnerModule
   ],
   providers: [],
   bootstrap: [AppComponent]

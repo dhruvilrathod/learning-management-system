@@ -28,7 +28,7 @@ export interface TalentOtherDetails {
     knownLanguages: string[],
     fieldSpecialization: string[],
     skillSpecialization: string,
-    profileImage: string
+    profileImage: string,
 }
 
 export interface TalentCredentialInterface {

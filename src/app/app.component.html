@@ -1,8 +1,6 @@
-<app-header-nav-bar class="header-navbar" *ngIf="router.url !== '/login' && router.url !== '/sign-up' && router.url !== '/reset-password'"></app-header-nav-bar>
+<app-header-nav-bar *ngIf="showHeaderNavBar == true"></app-header-nav-bar>
 
-<app-side-nav-bar class="side-navbar"
-    *ngIf="router.url !== '/login' && router.url !== '/sign-up' && router.url !== '/course-details' && router.url !== '/error-page' && router.url !== '/reset-password' && router.url !== '/'">
+<app-side-nav-bar *ngIf="showSideNavBar == true">
 </app-side-nav-bar>
 
-<router-outlet
-    *ngIf="router.url == '/login' || router.url == '/sign-up' || router.url == '/course-details' || router.url == '/error-page' || router.url == '/reset-password' || router.url == '/'"></router-outlet>
+<router-outlet *ngIf="showSideNavBar == false"></router-outlet>
