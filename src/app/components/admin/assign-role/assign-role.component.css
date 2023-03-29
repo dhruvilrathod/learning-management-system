@@ -1,0 +1,23 @@
+.assignee-table-container {
+  display: flex;
+}
+
+.indexContainer {
+  width: 10%;
+  /* background-color: aqua; */
+}
+
+.nameContainer {
+  width: 35%;
+  /* background-color: rgb(255, 34, 0); */
+}
+
+.roleContainer {
+  width: 15%;
+  /* background-color: rgb(0, 255, 34); */
+}
+
+.editContainer {
+  width: 20%;
+  /* background-color: blueviolet; */
+}
