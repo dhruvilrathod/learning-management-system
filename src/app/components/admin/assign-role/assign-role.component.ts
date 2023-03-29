@@ -1,16 +1,16 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 
 const ELEMENT_DATA = [
-  { position: 1, name: 'Hydrogen', weight: 1.0079, symbol: 'H' },
-  { position: 2, name: 'Helium', weight: 4.0026, symbol: 'He' },
-  { position: 3, name: 'Lithium', weight: 6.941, symbol: 'Li' },
-  { position: 4, name: 'Beryllium', weight: 9.0122, symbol: 'Be' },
-  { position: 5, name: 'Boron', weight: 10.811, symbol: 'B' },
-  { position: 6, name: 'Carbon', weight: 12.0107, symbol: 'C' },
-  { position: 7, name: 'Nitrogen', weight: 14.0067, symbol: 'N' },
-  { position: 8, name: 'Oxygen', weight: 15.9994, symbol: 'O' },
-  { position: 9, name: 'Fluorine', weight: 18.9984, symbol: 'F' },
-  { position: 10, name: 'Neon', weight: 20.1797, symbol: 'Ne' },
+  { index: 1, name: 'Hydrogen', role: 1.0079, Edit: 'H' },
+  { index: 2, name: 'Helium', role: 4.0026, Edit: 'He' },
+  { index: 3, name: 'Lithium', role: 6.941, Edit: 'Li' },
+  { index: 4, name: 'Beryllium', role: 9.0122, Edit: 'Be' },
+  { index: 5, name: 'Boron', role: 10.811, Edit: 'B' },
+  { index: 6, name: 'Carbon', role: 12.0107, Edit: 'C' },
+  { index: 7, name: 'Nitrogen', role: 14.0067, Edit: 'N' },
+  { index: 8, name: 'Oxygen', role: 15.9994, Edit: 'O' },
+  { index: 9, name: 'Fluorine', role: 18.9984, Edit: 'F' },
+  { index: 10, name: 'Neon', role: 20.1797, Edit: 'Ne' },
 ];
 @Component({
   selector: 'app-assign-role',
@@ -20,6 +20,6 @@ const ELEMENT_DATA = [
 export class AssignRoleComponent implements OnInit {
   ngOnInit() {}
 
-  displayedColumns: string[] = ['position', 'name', 'weight', 'symbol'];
+  displayedColumns: string[] = ['position', 'name', 'role', 'Edit'];
   dataSource = ELEMENT_DATA;
 }
